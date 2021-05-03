@@ -1,7 +1,7 @@
 <?php
 
-class M_statistik extends CI_Model
-{
+class M_rekap extends CI_Model {
+
     public function statistik_jumlah()
     {
         $sql = "SELECT tahun , jumlah_anak FROM tbl_statistik_anak ORDER BY tahun ASC";

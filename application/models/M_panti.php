@@ -17,7 +17,6 @@ class M_panti extends CI_Model {
         $this->db->order_by('id_panas','desc');
         return $this->db->get()->result();
     }
-
     
     public function detail($id_panas)
     {

@@ -15,6 +15,7 @@ echo '</div>';
                 <th>No</th>
                 <th>Nama Admin</th>
                 <th>Nomor Telepon</th>
+                <th>Email</th>
                 <th>Username</th>
                 <th>Aksi</th>
             </tr>
@@ -25,6 +26,7 @@ echo '</div>';
                 <td> <?= $no++; ?></td>
                 <td> <?= $value->nama_admin ?></td>
                 <td> <?= $value->nomor_telepon ?></td>
+                <td> <?= $value->email ?></td>
                 <td> <?= $value->username ?></td>
                 <td>
                     <a href="<?= base_url('adminpanti/edit/'.$value->id_admin) ?>" class="btn btn-sm btn-info">Edit</a>

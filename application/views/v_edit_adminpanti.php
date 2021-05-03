@@ -26,6 +26,16 @@
                 </div> 
 
                 <div class="form-group">
+                    <label>Nomor Telepon</label>
+                    <input name="nomor_telepon" placeholder="Nomor Telepon" value="<?= $adminpanti->nomor_telepon ?>" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input name="email" placeholder="Email" value="<?= $adminpanti->email ?>" class="form-control" />
+                </div>
+
+                <div class="form-group">
                     <label>Username</label>
                     <input name="username" placeholder="Username" value="<?= $adminpanti->username ?>" class="form-control" />
                 </div> 

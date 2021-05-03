@@ -83,11 +83,6 @@
                         <input name="npwp" placeholder="NPWP Panti Asuhan" value="<?= $panti->npwp ?>" class="form-control" />
                 </div>
 
-                <!-- <div class="form-group">
-                    <label>Ijin Operasional</label>
-                        <input name="ijin_operasional" placeholder="Ijin Operasional" value="" class="form-control" />
-                </div> -->
-
                 <div class="form-group">
                     <label>Nomor Telepon Panti Asuhan</label>
                         <input name="nomor_telepon" placeholder="Nomor Telepon Panti Asuhan" value="<?= $panti->nomor_telepon ?>" class="form-control" />

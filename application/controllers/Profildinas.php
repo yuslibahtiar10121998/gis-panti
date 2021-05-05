@@ -46,7 +46,7 @@ class Profildinas extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $data = array(
-                'title'     => 'Edit Data Admin Panti Asuhan',
+                'title'     => 'Edit Data Admin Dinas',
                 'profildinas' => $this->m_profildinas->detail($id_admin),
                 'isi'       => 'v_edit_profildinas'
             );

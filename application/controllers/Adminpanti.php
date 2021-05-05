@@ -35,14 +35,20 @@ class Adminpanti extends CI_Controller
             'required' => '%s Harus Diisi !'
         ));
 
-        $this->form_validation->set_rules('password', 'Password', 'required', array(
+        $this->form_validation->set_rules('email', 'Email', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
+
+        $this->form_validation->set_rules('nomor_telepon', 'Nomor Telepon', 'required', array(
+            'required' => '%s Harus Diisi !'
+        ));
+
+        $this->form_validation->set_rules('password', 'Password');
 
 
         if ($this->form_validation->run() == FALSE) {
             $data = array(
-                'title' => 'Edit Data Admin Panti Asuhan',
+                'title' => 'Input Data Admin Panti Asuhan',
                 'isi'   => 'v_input_adminpanti'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -51,6 +57,8 @@ class Adminpanti extends CI_Controller
 
                 'nama_admin'     => $this->input->post('nama_admin'),
                 'username'       => $this->input->post('username'),
+                'email'       => $this->input->post('email'),
+                'nomor_telepon'       => $this->input->post('nomor_telepon'),
                 'password'       => md5($this->input->post('password')),
 
             );
@@ -68,10 +76,16 @@ class Adminpanti extends CI_Controller
         ));
 
         $this->form_validation->set_rules('username', 'Username', 'required', array(
-            'required' => '%s Harus Dipilih !'
+            'required' => '%s Harus Diisi !'
         ));
 
-        $this->form_validation->set_rules('password', 'Password');
+        $this->form_validation->set_rules('email', 'Email', 'required', array(
+            'required' => '%s Harus Diisi !'
+        ));
+
+        $this->form_validation->set_rules('nomor_telepon', 'Nomor Telepon', 'required', array(
+            'required' => '%s Harus Diisi !'
+        ));
 
 
         if ($this->form_validation->run() == FALSE) {
@@ -84,9 +98,11 @@ class Adminpanti extends CI_Controller
         } else {
             $data = array(
                 'id_admin'    => $id_admin,
-                'nama_admin'        => $this->input->post('nama_admin'),
-                'username'          => $this->input->post('username'),
-                'password'          => md5($this->input->post('password')),
+                'nama_admin'     => $this->input->post('nama_admin'),
+                'username'       => $this->input->post('username'),
+                'email'       => $this->input->post('email'),
+                'nomor_telepon'       => $this->input->post('nomor_telepon'),
+                'password'       => md5($this->input->post('password')),
 
             );
             $this->m_adminpanti->edit($data);

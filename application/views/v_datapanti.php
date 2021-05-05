@@ -23,9 +23,10 @@ echo '</div>';
                 <th>Nomor Telepon</th>
                 <th>Jumlah Pengurus</th>
                 <th>Gambar Panti</th>
-            <?php if ($this->session->userdata('username')<>"") { ?>
                 <th>Aksi</th>
-            <?php } ?>
+            <!-- <?php if ($this->session->userdata('username')<>"") { ?>
+                
+            <?php } ?> -->
             </tr>
         </thead>
         <tbody>

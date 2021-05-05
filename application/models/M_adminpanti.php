@@ -11,6 +11,7 @@ class M_adminpanti extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_admin');
+        $this->db->join('tbl_panas', 'tbl_admin.panas_id = tbl_panas.id_panas');
         if (!empty($where)) {
             $this->db->where($where);
         }

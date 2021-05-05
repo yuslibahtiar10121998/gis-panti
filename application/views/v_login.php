@@ -36,11 +36,14 @@ body {
         <div class="row ">
 
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                <div class="panel panel-primary">
+                <div class="panel">
+                <div class="text-center">
                     <div class="panel-heading">
-                        Login Admin
+                    <h3 style="color: lime;"><span style="color: cyan;">Admin </span>Login</h3>
+                    </div>
                     </div>
                     <div class="panel-body">
+                    
                         <?php
                         //code validasi data tidak boleh kosong
                         echo validation_errors('<div class="alert alert-warning alert-dismissable">
@@ -69,8 +72,8 @@ body {
 
                         <div class="form-group">
                             <label></label>
-                            <button type="submit" class="btn btn-sm btn-success">Login</button>
-                            <a href="<?= base_url() ?>" class="btn btn-sm btn-warning">Kembali Ke Web</a>
+                            <button type="submit" class="btn btn-sm btn-info">Login</button>
+                            <a href="<?= base_url() ?>" class="btn btn-sm btn-success">Kembali Ke Web</a>
                         </div>
 
                         <?php echo form_close() ?>

@@ -45,7 +45,11 @@ class Anak extends CI_Controller
             'required' => '%s Harus Diisi !'
         ));
 
-        $this->form_validation->set_rules('pendidikan_id', 'Pendidikan', 'required', array(
+        $this->form_validation->set_rules('id_pendidikan', 'Pendidikan', 'required', array(
+            'required' => '%s Harus Diisi !'
+        ));
+
+        $this->form_validation->set_rules('status_id', 'Status', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
 
@@ -63,8 +67,8 @@ class Anak extends CI_Controller
                 'asal_tempat_lahir'      => $this->input->post('asal_tempat_lahir'),
                 'tanggal_lahir'          => $this->input->post('tanggal_lahir'),
                 'umur'                   => $this->input->post('umur'),
-                'pendidikan_id'             => $this->input->post('pendidikan_id'),
-
+                'id_pendidikan'             => $this->input->post('id_pendidikan'),
+                'status_id'             => $this->input->post('status_id'),
             );
             $this->m_anak->simpan($data);
             $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');

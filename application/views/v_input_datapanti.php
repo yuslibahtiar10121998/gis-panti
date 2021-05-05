@@ -81,11 +81,6 @@
                 <input name="npwp" placeholder="NPWP Panti Asuhan" <?= set_value('npwp') ?> class="form-control" />
             </div>
 
-            <!-- <div class="form-group">
-                    <label>Ijin Operasional</label>
-                        <input name="ijin_operasional" placeholder="Ijin Operasional"  class="form-control" />
-                </div> -->
-
             <div class="form-group">
                 <label>Nomor Telepon Panti Asuhan</label>
                 <input name="nomor_telepon" placeholder="Nomor Telepon Panti Asuhan" <?= set_value('nomor_telepon') ?> class="form-control" />
@@ -114,7 +109,7 @@
             <div class="form-group">
                 <label></label>
                 <button type="submit" class="btn btn-sm btn-success">Simpan</button>
-                <a href="<?= base_url('panti/batal/') ?>"type="reset" class="btn btn-sm btn-warning">batal</a>
+                <a href="<?= base_url('panti/batal/') ?>" type="reset" class="btn btn-sm btn-warning">batal</a>
             </div>
 
         </div>

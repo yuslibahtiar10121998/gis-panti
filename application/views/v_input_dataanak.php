@@ -26,16 +26,19 @@
                     <input name="nama_lengkap" placeholder="Nama Lengkap" <?= set_value('nama_lengkap') ?> class="form-control" />
                 </div> 
                 <div class="form-group">
-                    <label>Jenis Kelamin</label>
-                    <input name="jenis_kelamin" placeholder="Jenis Kelamin" <?= set_value('jenis_kelamin') ?> class="form-control" />
-                </div>
+                <label>Pilih Jenis Kelamin</label>
+                <select name="jenis_kelamin" class="form-control">
+                    <option > Laki-laki </option>
+                    <option > Perempuan </option>
+                </select>
+            </div>
                 <div class="form-group">
                     <label>Asal Tempat Lahir</label>
                     <input name="asal_tempat_lahir" placeholder="Asal Tempat Lahir" <?= set_value('asal_tempat_lahir') ?> class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Tanggal Lahir</label>
-                    <input name="tanggal_lahir" placeholder="yy-mm-dd" <?= set_value('tanggal_lahir') ?> class="form-control" />
+                    <input name="tanggal_lahir"  <?= set_value('tanggal_lahir') ?> type="date" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Umur</label>
@@ -43,6 +46,10 @@
                 </div>
                 <div class="form-group">
                     <label>Pendidikan</label>
+                    <input name="pendidikan" placeholder="Pendidikan" <?= set_value('pendidikan') ?> class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
                     <input name="pendidikan" placeholder="Pendidikan" <?= set_value('pendidikan') ?> class="form-control" />
                 </div>
 

@@ -41,7 +41,7 @@
 
             <div class="form-group">
                 <label>Email</label>
-                <input name="email" placeholder="Email" <?= set_value('email') ?> class="form-control" />
+                <input name="email" placeholder="Email" <?= set_value('email') ?>  class="form-control" />
             </div>
 
             <div class="form-group">

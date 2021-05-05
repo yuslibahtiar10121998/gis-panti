@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label>Tanggal Lahir</label>
-                    <input name="tanggal_lahir" placeholder="yy-mm-dd" value="<?= $anak->tanggal_lahir ?>" class="form-control" />
+                    <input name="tanggal_lahir" placeholder="yy-mm-dd" value="<?= $anak->tanggal_lahir ?>" type="date" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Umur</label>
@@ -44,6 +44,10 @@
                 <div class="form-group">
                     <label>Pendidikan</label>
                     <input name="pendidikan" placeholder="Pendidikan" value="<?= $anak->pendidikan_id ?>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <input name="status" placeholder="Status" value="<?= $anak->status_id ?>" class="form-control" />
                 </div>
 
                 <div class="form-group">

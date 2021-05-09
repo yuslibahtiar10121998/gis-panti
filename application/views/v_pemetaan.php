@@ -19,7 +19,7 @@ iconSize: [30, 45],
 <?php foreach ($panti as $key => $value) { ?>
     L.marker ( [ <?= $value->latitude ?>, <?= $value ->longitude ?>],{icon:icon_panti} ).addTo(mymap)
     .bindPopup("<b>Nama Panti : <?= $value->nama_panas ?></b><br/>"+
-    "Alamat : <?= $value->alamat ?></br>"+
+    "Kecamatan : <?= $value->nama_kecamatan ?></br>"+
     "No.Telp : <?= $value->nomor_telepon ?></br>");
 <?php } ?>
 

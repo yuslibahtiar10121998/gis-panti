@@ -45,23 +45,18 @@ class Anak extends CI_Controller
             'required' => '%s Harus Diisi !'
         ));
 
-        $this->form_validation->set_rules('id_pendidikan', 'Pendidikan', 'required', array(
-            'required' => '%s Harus Diisi !'
-        ));
-
-        $this->form_validation->set_rules('status_id', 'Status', 'required', array(
-            'required' => '%s Harus Diisi !'
-        ));
-
         if ($this->form_validation->run() == FALSE) {
             $data = array(
                 'title' => 'Input Data Anak',
-                'isi'   => 'v_input_dataanak'
+                'isi'   => 'v_input_dataanak',
+                "list_pendidikan" => $this->m_anak->tampil(['panas_id' => get_user()->id_panas]),
+                "list_status" => $this->m_anak->tampil(['panas_id' => get_user()->id_panas])
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
         } else {
             $data = array(
-
+                'pendidikan_id' => get_user()->pendidikan_id,
+                'status_id' => get_user()->status_id,
                 'nama_lengkap'           => $this->input->post('nama_lengkap'),
                 'jenis_kelamin'          => $this->input->post('jenis_kelamin'),
                 'asal_tempat_lahir'      => $this->input->post('asal_tempat_lahir'),
@@ -98,14 +93,13 @@ class Anak extends CI_Controller
             'required' => '%s Harus Diisi !'
         ));
 
-        $this->form_validation->set_rules('pendidikan_id', 'Pendidikan', 'required', array(
-            'required' => '%s Harus Diisi !'
-        ));
 
         if ($this->form_validation->run() == FALSE) {
             $data = array(
                 'title' => 'Edit Data Anak',
                 'anak'  => $this->m_anak->detail($id_anak),
+                "list_pendidikan" => $this->m_anak->tampil(['panas_id' => get_user()->id_panas]),
+                "list_status" => $this->m_anak->tampil(['panas_id' => get_user()->id_panas]),
                 'isi'   => 'v_edit_dataanak'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);

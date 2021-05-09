@@ -17,9 +17,6 @@
                     <li>
                         <a href="<?= base_url('adminpanti') ?>"><i class="fa fa-list fa-2x"></i> List Admin Panti</a>
                     </li>
-                    <li>
-                        <a href="<?= base_url('listanak') ?>"><i class="fa fa-list-ol fa-2x"></i> List Anak Asuh</a>
-                    </li>
 
                 <?php else : ?>
                     <li>

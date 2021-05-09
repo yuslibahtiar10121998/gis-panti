@@ -7,6 +7,7 @@ class M_profil extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_panas');
+        $this->db->join('tbl_kecamatan', 'tbl_panas.kecamatan_id = tbl_kecamatan.id_kecamatan');
         if (!empty($where)) {
             $this->db->where($where);
         }

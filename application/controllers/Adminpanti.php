@@ -51,7 +51,7 @@ class Adminpanti extends CI_Controller
             $data = array(
                 'title' => 'Input Data Admin Panti Asuhan',
                 'isi'   => 'v_input_adminpanti',
-                "list_panti" => $this->m_panti->tampil(['wilayah_id' => get_user()->id_wilayah])
+                "list_panti" => $this->m_panti->tampil(['tbl_admin.wilayah_id' => get_user()->id_wilayah])
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
         } else {

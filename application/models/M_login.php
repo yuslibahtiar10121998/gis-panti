@@ -18,7 +18,7 @@ class M_login extends CI_Model
         }
 
         if ($res->is_dinas != "1") {
-            $panti = $this->M_panti->tampil(['admin_panti_id' => $res->id_admin]);
+            $panti = $this->M_panti->tampil(['id_admin' => $res->id_admin]);
             if (empty($panti)) {
                 return false;
             }

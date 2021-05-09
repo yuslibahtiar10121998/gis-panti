@@ -41,13 +41,14 @@ echo '</div>';
                 <td> <?= $value->alamat ?></td>
                 <td> <?= $value->nomor_rekening ?></td>
                 <td> <?= $value->npwp ?></td>
-  
                 <td> <?= $value->nomor_telepon ?></td>
                 <td> <?= $value->jumlah_pengurus ?></td>
                 <td> <img src="<?= base_url('gambar/' . $value->gambar) ?>" height="50px" width="70px"></td>
                 <td>
                     <a href="<?= base_url('panti/edit/'.$value->id_panas) ?>" class="btn btn-sm btn-info">Edit</a>
+                    <a href="<?= base_url('panti/lihatanak/'.$value->id_panas) ?>" class="btn btn-sm btn-success">Lihat anak</a>
                     <a href="<?= base_url('panti/hapus/'.$value->id_panas) ?>" class="btn btn-sm btn-danger" onClick="return confirm('Yakin ingin menghapus ?')">Hapus</a>
+                   
                 </td>
         </tr>
     <?php } ?> 

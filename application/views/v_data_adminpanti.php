@@ -25,7 +25,7 @@ echo '</div>';
         <?php $no=1; foreach ($adminpanti as $key => $value) { ?>
             <tr>
                 <td> <?= $no++; ?></td>
-                <td> <?= $value->id_panas ?></td>
+                <td> <?= $value->nama_panas ?></td>
                 <td> <?= $value->nama_admin ?></td>
                 <td> <?= $value->nomor_telepon ?></td>
                 <td> <?= $value->email ?></td>

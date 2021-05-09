@@ -28,9 +28,10 @@
             <div class="form-group">
                 <label>Panti Asuhan</label>
                 <select name="id_panas" class="form-control">
-                    <option value=""> Pilih Panti</option>
-                    <option value=""> contoh 1 </option>
-                    <option value=""> contoh 2 </option>
+                <option value="">--Pilih Panti asuhan--</option>
+                <?php foreach($list_panti as $panti) : ?>
+                <option value="<?= $panti->id_panas?>"><?= $panti->nama_panas?></option>
+                <?php endforeach;?>
                 </select>
             </div>
 

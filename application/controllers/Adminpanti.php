@@ -5,6 +5,7 @@ class Adminpanti extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_adminpanti');
+        $this->load->model('m_panti');
     }
 
     public function index()
@@ -49,12 +50,14 @@ class Adminpanti extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $data = array(
                 'title' => 'Input Data Admin Panti Asuhan',
-                'isi'   => 'v_input_adminpanti'
+                'isi'   => 'v_input_adminpanti',
+                "list_panti" => $this->m_panti->tampil(['wilayah_id' => get_user()->id_wilayah])
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
         } else {
             $data = array(
-
+                'wilayah_id' => get_user()->wilayah_id,
+                'panas_id' => $this->input->post('id_panas'),
                 'nama_admin'     => $this->input->post('nama_admin'),
                 'username'       => $this->input->post('username'),
                 'email'       => $this->input->post('email'),

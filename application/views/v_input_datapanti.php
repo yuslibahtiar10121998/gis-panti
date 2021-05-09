@@ -34,12 +34,22 @@
                 echo '</div>';
             }
 
-            echo form_open_multipart('panti');
+            echo form_open_multipart('panti/input');
             ?>
 
             <div class="form-group">
                 <label>Nama Panti Asuhan</label>
                 <input name="nama_panas" placeholder="Nama Panti Asuhan" <?= set_value('nama_panas') ?> class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Kecamatan</label>
+                <select name="kecamatan_id" class="form-control">
+                    <option value=""> Pilih Kecamatan</option>
+                    <?php foreach ($list_kecamatan as $kecamatan) : ?>
+                        <option value="<?= $kecamatan['id_kecamatan'] ?>"> <?= $kecamatan["nama_kecamatan"] ?> </option>
+                    <?php endforeach; ?>
+                </select>
             </div>
 
             <div class="form-group">
@@ -92,6 +102,11 @@
             </div>
 
             <div class="form-group">
+                <label>Tahun Berdiri</label>
+                <input name="tahun_berdiri" placeholder="Tahun Berdiri" <?= set_value('tahun_berdiri') ?> class="form-control" />
+            </div>
+
+            <div class="form-group">
                 <label>Latitude</label>
                 <input id="Latitude" name="latitude" placeholder="Latitude" <?= set_value('latitude') ?> class="form-control" readonly />
             </div>
@@ -111,9 +126,7 @@
                 <button type="submit" class="btn btn-sm btn-success">Simpan</button>
                 <a href="<?= base_url('panti/batal/') ?>" type="reset" class="btn btn-sm btn-warning">batal</a>
             </div>
-
         </div>
-
         <?php echo form_close(); ?>
     </div>
 </div>

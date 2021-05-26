@@ -25,6 +25,7 @@ class Anak extends CI_Controller
 
     public function input()
     {
+        if (!empty($this->input->post())) {
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
@@ -68,8 +69,20 @@ class Anak extends CI_Controller
             $this->m_anak->simpan($data);
             $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
             redirect('anak');
-        }
+        
+        } {
+        die(validation_errors());
     }
+
+} else {
+    $data = array(
+        'title' => 'Input Data Anak Asuh',
+        'isi'   => 'v_input_dataanak',
+        'list_pendidikan' => get_tbl_pendidikan(get_user()->id_pendidikan)
+    );
+    $this->load->view('layout/v_wrapper', $data, FALSE);
+    }
+}
 
     public function edit($id_anak)
     {

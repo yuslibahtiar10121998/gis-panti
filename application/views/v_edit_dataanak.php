@@ -43,21 +43,21 @@
             </div>
 
             <div class="form-group">
-                <label>Pendidikan </label>
-                <select name="id_panas" class="form-control">
+                <label>Pendidikan</label>
+                <select name="pendidikan_id" class="form-control">
                     <option value="">--Pilih Pendidikan--</option>
-                    <?php foreach ($list_pendidikan as $anak) : ?>
-                        <option value="<?= $anak->id_pendidikan ?>"><?= $anak->pendidikan ?></option>
+                    <?php foreach ($list_pendidikan as $pendidikan) : ?>
+                        <option value="<?= $pendidikan['id_pendidikan'] ?>"> <?= $pendidikan["pendidikan"] ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>
 
             <div class="form-group">
-                <label>Status</label>
-                <select name="id_panas" class="form-control">
+                <label>status</label>
+                <select name="status_id" class="form-control">
                     <option value="">--Pilih Status--</option>
-                    <?php foreach ($list_status as $anak) : ?>
-                        <option value="<?= $anak->id_status ?>"><?= $anak->status ?></option>
+                    <?php foreach ($list_status as $status) : ?>
+                        <option value="<?= $status['id_status'] ?>"> <?= $status["status"] ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>

@@ -12,7 +12,7 @@ class Panti extends CI_Controller
     {
         $data = array(
             'title' => 'Data Panti Asuhan',
-            'panti' =>  $this->m_panti->tampil(['tbl_admin.wilayah_id' => get_user()->id_wilayah]),
+            'panti' =>  $this->m_panti->tampil(['tbl_kecamatan.wilayah_id' => get_user()->id_wilayah]),
             'isi'   => 'v_datapanti'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
@@ -110,9 +110,16 @@ class Panti extends CI_Controller
                         'gambar'            => $upload_data['uploads']['file_name'],
 
                     );
-                    $this->m_panti->simpan($data);
-                    $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
-                    redirect('panti');
+
+                    $res = $this->m_panti->simpan($data);
+
+                    if ($res) {
+                        $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
+                        redirect('panti');
+                    } else {
+                        $this->session->set_flashdata('pesan', 'Data gagal Disimpan !');
+                        redirect('panti');
+                    }
                 }
             } else {
                 die(validation_errors());

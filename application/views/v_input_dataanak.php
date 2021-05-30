@@ -49,8 +49,8 @@
                 <label>Pendidikan</label>
                 <select name="pendidikan_id" class="form-control">
                     <option value="">--Pilih Pendidikan--</option>
-                    <?php foreach ($list_pendidikan as $pendidikan) : ?>
-                        <option value="<?= $pendidikan['id_pendidikan'] ?>"> <?= $pendidikan["pendidikan"] ?> </option>
+                    <?php foreach ($list_pendidikan as $key => $pendidikan) : ?>
+                        <option value="<?= $key ?>"> <?= $pendidikan ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -59,8 +59,8 @@
                 <label>status</label>
                 <select name="status_id" class="form-control">
                     <option value="">--Pilih Status--</option>
-                    <?php foreach ($list_status as $status) : ?>
-                        <option value="<?= $status['id_status'] ?>"> <?= $status["status"] ?> </option>
+                    <?php foreach ($list_status as $key => $status) : ?>
+                        <option value="<?= $key ?>"> <?= $status ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>

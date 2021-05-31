@@ -35,14 +35,6 @@ function get_kecamatan($id_wilayah = null)
     return $CI->db->get_where('tbl_kecamatan', ['wilayah_id' => $id_wilayah])->result_array();
 }
 
-// function get_tbl_pendidikan($id_pendidikan = null)
-// {
-//     $CI = &get_instance();
-
-//     return $CI->db->get_where('tbl_pendidikan', ['id_pendidikan' => $id_pendidikan])->result_array();
-// }
-
-
 function get_pendidikan($id_pendidikan = null)
 {
     $data_pendidikan = [
@@ -73,3 +65,17 @@ function get_status($id_status = null)
 
     return $data_status[$id_status];
 }
+
+// function get_kelamin($id_kelamin = null)
+// {
+//     $data_kelamin = [
+//         ID_LAKI_LAKI => "LAKI-LAKI",
+//         ID_PEREMPUAN => "PEREMPUAN",
+//     ];
+
+//     if ($id_kelamin == null) {
+//         return $data_kelamin;
+//     }
+
+//     return $data_kelamin[$id_kelamin];
+// }

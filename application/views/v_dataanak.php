@@ -9,6 +9,10 @@
     }
     ?>
     <div class="table-responsive">
+        <?php foreach ($anak as $key => $value) ?>
+        <td>
+            <a href="<?= base_url('anak/input/' . $value->id_anak) ?>" class="btn btn-sm-40 btn-success">Tambah</a>
+        </td>
         <table class="table table-responsive table-bordered" id="dataTables-example">
             <thead>
                 <tr>

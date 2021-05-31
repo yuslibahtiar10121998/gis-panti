@@ -34,7 +34,7 @@
                 <?php endif; ?>
 
                 <!-- menu input -->
-                <li>
+                <!-- <li>
                     <a href="#"><i class="fa fa-edit fa-2x"></i> Input Data<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <?php if ($this->session->userdata('user')->is_dinas == '1') : ?>
@@ -51,7 +51,7 @@
                                 <a href="<?= base_url('anak/input') ?>"><i class="fa fa-plus fa-2x"></i>Input Data Anak</a>
                             </li>
                         <?php endif; ?>
-                    </ul>
+                    </ul> -->
                 <?php } ?>
         </ul>
 

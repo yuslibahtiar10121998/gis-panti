@@ -62,11 +62,6 @@
             </div>
 
             <div class="form-group">
-                <label>Pimpinan Panti Asuhan</label>
-                <input name="pimpinan_panas" placeholder="Pimpinan Panti Asuhan" <?= set_value('pemimpin_panas') ?> class="form-control" />
-            </div>
-
-            <div class="form-group">
                 <label>Jumlah Anak Asuh</label>
                 <input name="jumlah_anak" placeholder="Jumlah Anak Asuh" <?= set_value('jumlah_anak') ?> class="form-control" />
             </div>
@@ -84,11 +79,6 @@
             <div class="form-group">
                 <label>Nomor Rekening</label>
                 <input name="nomor_rekening" placeholder="Nomor Rekening" <?= set_value('nomor_rekening') ?> class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label>NPWP Panti Asuhan</label>
-                <input name="npwp" placeholder="NPWP Panti Asuhan" <?= set_value('npwp') ?> class="form-control" />
             </div>
 
             <div class="form-group">

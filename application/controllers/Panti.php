@@ -258,7 +258,9 @@ class Panti extends CI_Controller
             $data = array(
                 'title' => 'Edit Data Panti Asuhan',
                 'panti' => $this->m_panti->detail($id_panas),
-                'isi'   => 'v_edit_datapanti'
+                'isi'   => 'v_edit_datapanti',
+                'list_kecamatan' => get_kecamatan(get_user()->id_wilayah)
+
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
         }

@@ -64,11 +64,6 @@
             </div>
 
             <div class="form-group">
-                <label>Pimpinan Panti Asuhan</label>
-                <input name="pimpinan_panas" placeholder="Pimpinan Panti Asuhan" value="<?= $panti->pimpinan_panas ?>" class="form-control" />
-            </div>
-
-            <div class="form-group">
                 <label>Jumlah Anak Asuh</label>
                 <input name="jumlah_anak" placeholder="Jumlah Anak Asuh" value="<?= $panti->jumlah_anak ?>" class="form-control" />
             </div>
@@ -89,11 +84,6 @@
             </div>
 
             <div class="form-group">
-                <label>NPWP Panti Asuhan</label>
-                <input name="npwp" placeholder="NPWP Panti Asuhan" value="<?= $panti->npwp ?>" class="form-control" />
-            </div>
-
-            <div class="form-group">
                 <label>Nomor Telepon Panti Asuhan</label>
                 <input name="nomor_telepon" placeholder="Nomor Telepon Panti Asuhan" value="<?= $panti->nomor_telepon ?>" class="form-control" />
             </div>
@@ -101,6 +91,11 @@
             <div class="form-group">
                 <label>Jumlah Pengurus</label>
                 <input name="jumlah_pengurus" placeholder="Jumlah Pengurus" value="<?= $panti->jumlah_pengurus ?>" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Tahun Berdiri</label>
+                <input name="tahun_berdiri" placeholder="Tahun Berdiri" value="<?= $panti->tahun_berdiri ?>" class="form-control" />
             </div>
 
             <div class="form-group">

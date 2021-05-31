@@ -52,11 +52,6 @@
                         <option value="LKSA"> LKSA </option> 
                     </select>
                 </div> 
-
-                <div class="form-group">
-                    <label>Pimpinan Panti Asuhan</label>
-                        <input name="pimpinan_panas" placeholder="Pimpinan Panti Asuhan" value="<?= $profil->pimpinan_panas ?>" class="form-control" />
-                </div> 
                         
                 <div class="form-group">
                     <label>Jumlah Anak Asuh</label>
@@ -79,18 +74,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label>NPWP Panti Asuhan</label>
-                        <input name="npwp" placeholder="NPWP Panti Asuhan" value="<?= $profil->npwp ?>" class="form-control" />
-                </div>
-
-                <!-- <div class="form-group">
-                    <label>Ijin Operasional</label>
-                        <input name="ijin_operasional" placeholder="Ijin Operasional" value="" class="form-control" />
-                </div> -->
-
-                <div class="form-group">
                     <label>Nomor Telepon Panti Asuhan</label>
                         <input name="nomor_telepon" placeholder="Nomor Telepon Panti Asuhan" value="<?= $profil->nomor_telepon ?>" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label>Tahun Berdiri</label>
+                        <input name="tahun_berdiri" placeholder="Tahun berdiri" value="<?= $profil->tahun_berdiri ?>" class="form-control" />
                 </div>
 
                 <div class="form-group">

@@ -25,11 +25,6 @@
                 <td><?= $value->jenis_panas ?></td>
             </tr>
             <tr>
-                <th width="200px">Pimpinan Panti Asuhan</th>
-                <th width="30px">:</th>
-                <td><?= $value->pimpinan_panas ?></td>
-            </tr>
-            <tr>
                 <th width="200px">Jumlah anak Asuh</th>
                 <th width="30px">:</th>
                 <td><?= $value->jumlah_anak ?></td>
@@ -45,16 +40,6 @@
                 <td><?= $value->alamat ?></td>
             </tr>
             <tr>
-                <th width="200px">Nomor Rekening</th>
-                <th width="30px">:</th>
-                <td><?= $value->nomor_rekening ?></td>
-            </tr>
-            <tr>
-                <th width="200px">NPWP Panti Asuhan</th>
-                <th width="30px">:</th>
-                <td><?= $value->npwp ?></td>
-            </tr>
-            <tr>
                 <th width="200px">Nomor Telepon</th>
                 <th width="30px">:</th>
                 <td><?= $value->nomor_telepon ?></td>
@@ -63,6 +48,16 @@
                 <th width="200px">Jumlah Pengurus</th>
                 <th width="30px">:</th>
                 <td><?= $value->jumlah_pengurus ?></td>
+            </tr>
+            <tr>
+                <th width="200px">Nomor Rekening</th>
+                <th width="30px">:</th>
+                <td><?= $value->nomor_rekening ?></td>
+            </tr>
+            <tr>
+                <th width="200px">Tahun Berdiri</th>
+                <th width="30px">:</th>
+                <td><?= $value->tahun_berdiri ?></td>
             </tr>
             <tr>
                 <th width="200px">Gambar Panti</th>
@@ -90,8 +85,7 @@ iconSize: [30, 45],
 <?php foreach ($profil as $key => $value) { ?>
     L.marker ( [ <?= $value->latitude ?>, <?= $value ->longitude ?>],{icon:icon_panti} ).addTo(mymap)
     .bindPopup("<b>Nama Panti : <?= $value->nama_panas ?></b><br/>"+
-    "Kecamatan : <?= $value->nama_kecamatan ?></br>"+
-    "No.Telp : <?= $value->nomor_telepon ?></br>").openPopup();;
+    "Kecamatan : <?= $value->nama_kecamatan ?></br>").openPopup();;
 <?php } ?>
 
 </script>

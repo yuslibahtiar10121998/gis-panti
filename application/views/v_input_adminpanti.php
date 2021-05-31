@@ -52,7 +52,7 @@
 
             <div class="form-group">
                 <label>Password</label>
-                <input name="password" placeholder="Password" <?= set_value('password') ?> class="form-control" />
+                <input type="password" name="password" placeholder="Password" <?= set_value('password') ?> class="form-control" />
             </div>
 
             <div class="form-group">

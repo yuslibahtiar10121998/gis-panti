@@ -18,24 +18,21 @@
                 echo '</div>';
             }
 
-            echo form_open('anak/edit/' . $anak->id_anak);
+            echo form_open_multipart('anak/edit/' . $anak->id_anak);
             ?>
 
             <div class="form-group">
                 <label>Nama Anak</label>
                 <input name="nama_lengkap" placeholder="Nama Lengkap" value="<?= $anak->nama_lengkap ?>" class="form-control" />
             </div>
-            <div class="form-group">
-                <label>Jenis Kelamin</label>
-                <input name="jenis_kelamin" placeholder="Jenis Kelamin" value="<?= $anak->jenis_kelamin ?>" class="form-control" />
-            </div>
+
             <div class="form-group">
                 <label>Asal Tempat Lahir</label>
                 <input name="asal_tempat_lahir" placeholder="Asal Tempat Lahir" value="<?= $anak->asal_tempat_lahir ?>" class="form-control" />
             </div>
             <div class="form-group">
                 <label>Tanggal Lahir</label>
-                <input name="tanggal_lahir" placeholder="yy-mm-dd" value="<?= $anak->tanggal_lahir ?>" type="date" class="form-control" />
+                <input name="tanggal_lahir" value="<?= $anak->tanggal_lahir ?>" type="date" class="form-control" />
             </div>
             <div class="form-group">
                 <label>Umur</label>
@@ -46,8 +43,8 @@
                 <label>Pendidikan</label>
                 <select name="pendidikan_id" class="form-control">
                     <option value="">--Pilih Pendidikan--</option>
-                    <?php foreach ($list_pendidikan as $pendidikan) : ?>
-                        <option value="<?= $pendidikan['id_pendidikan'] ?>"> <?= $pendidikan["pendidikan"] ?> </option>
+                    <?php foreach ($list_pendidikan as $key => $pendidikan) : ?>
+                        <option value="<?= $key ?>"> <?= $pendidikan ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -56,8 +53,18 @@
                 <label>status</label>
                 <select name="status_id" class="form-control">
                     <option value="">--Pilih Status--</option>
-                    <?php foreach ($list_status as $status) : ?>
-                        <option value="<?= $status['id_status'] ?>"> <?= $status["status"] ?> </option>
+                    <?php foreach ($list_status as $key => $status) : ?>
+                        <option value="<?= $key ?>"> <?= $status ?> </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>kelamin</label>
+                <select name="kelamin_id" class="form-control">
+                    <option value="">--Pilih Jenis Kelamin--</option>
+                    <?php foreach ($list_kelamin as $key => $kelamin) : ?>
+                        <option value="<?= $key ?>"> <?= $kelamin ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>

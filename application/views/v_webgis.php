@@ -843,7 +843,8 @@
 
                     }
                 }
-            }).addTo(mymap);
+            }).addTo(mymap).bindPopup(
+                    "<br><a href='<?= base_url('kosong') ?>" + "' class='btn btn-sm btn-default'>Statistik</a></br>");
 
             mymap.addLayer(L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> Pengguna, ' +
@@ -873,16 +874,16 @@
 
             for (i in data) {
                 //isi pencarian yang muncul
-                var alamat = data[i].alamat;
+                // var alamat = data[i].alamat;
                 var nama_panas = data[i].nama_panas;
                 //auto posision lokasi ketika di klik
                 var lokasi = data[i].lokasi;
                 var idpanas = data[i].id_panas;
                 var gambar = data[i].gambar;
                 var marker = L.marker(L.latLng(lokasi), {
-                    title: [nama_panas, alamat]
+                    title: [nama_panas]
                 });
-                marker.bindPopup("<img src='<?= base_url('gambar/') ?>" + gambar + "' width='100%' height='100%'>" + 'Nama Panti : ' + nama_panas + "<br>Alamat : " + alamat +
+                marker.bindPopup("<img src='<?= base_url('gambar/') ?>" + gambar + "' width='100%' height='100%'>"  + nama_panas +
                     "<br><a href='<?= base_url('webgis/detail/') ?>" + idpanas + "' class='btn btn-sm btn-default'>Detail</a></br>");
                 markersLayer.addLayer(marker);
             }

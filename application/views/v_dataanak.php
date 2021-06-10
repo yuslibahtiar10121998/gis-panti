@@ -33,7 +33,7 @@
                     <tr>
                         <td> <?= $no++; ?></td>
                         <td> <?= $value->nama_lengkap ?></td>
-                        <td> <?= $value->jenis_kelamin ?></td>
+                        <td> <?= $value->nama_kelamin ?></td>
                         <td> <?= $value->asal_tempat_lahir ?></td>
                         <td> <?= $value->tanggal_lahir ?></td>
                         <td> <?= $value->umur ?></td>

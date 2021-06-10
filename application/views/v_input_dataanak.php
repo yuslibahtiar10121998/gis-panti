@@ -26,13 +26,6 @@
                 <input name="nama_lengkap" placeholder="Nama Lengkap" <?= set_value('nama_lengkap') ?> class="form-control" />
             </div>
             <div class="form-group">
-                <label>Pilih Jenis Kelamin</label>
-                <select name="jenis_kelamin" class="form-control">
-                    <option> Laki-laki </option>
-                    <option> Perempuan </option>
-                </select>
-            </div>
-            <div class="form-group">
                 <label>Asal Tempat Lahir</label>
                 <input name="asal_tempat_lahir" placeholder="Asal Tempat Lahir" <?= set_value('asal_tempat_lahir') ?> class="form-control" />
             </div>
@@ -61,6 +54,16 @@
                     <option value="">--Pilih Status--</option>
                     <?php foreach ($list_status as $key => $status) : ?>
                         <option value="<?= $key ?>"> <?= $status ?> </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>kelamin</label>
+                <select name="kelamin_id" class="form-control">
+                    <option value="">--Pilih Jenis Kelamin--</option>
+                    <?php foreach ($list_kelamin as $key => $kelamin) : ?>
+                        <option value="<?= $key ?>"> <?= $kelamin ?> </option>
                     <?php endforeach; ?>
                 </select>
             </div>

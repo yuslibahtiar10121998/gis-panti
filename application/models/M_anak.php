@@ -9,6 +9,7 @@ class M_anak extends CI_Model
         $this->db->from('tbl_anak');
         $this->db->join('tbl_pendidikan', 'tbl_anak.pendidikan_id = tbl_pendidikan.id_pendidikan');
         $this->db->join('tbl_status', 'tbl_anak.status_id = tbl_status.id_status');
+        $this->db->join('tbl_kelamin', 'tbl_anak.kelamin_id = tbl_kelamin.id_kelamin');
         if (!empty($where)) {
             $this->db->where($where);
         }

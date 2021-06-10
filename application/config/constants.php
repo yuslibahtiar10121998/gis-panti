@@ -101,3 +101,8 @@ define('ID_PEND_TIDAK', 4);
 define('ID_STATUS_YATIM', 1);
 define('ID_STATUS_PIATU', 2);
 define('ID_STATUS_YPT', 3);
+
+// Status
+
+define('ID_PEREMPUAN', 1);
+define('ID_LAKI_LAKI', 2);

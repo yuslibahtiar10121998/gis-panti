@@ -33,10 +33,6 @@ class Profil extends CI_Controller
             'required' => '%s Harus Dipilih !'
         ));
 
-        $this->form_validation->set_rules('pimpinan_panas', 'Pimpinan Panti Asuhan', 'required', array(
-            'required' => '%s Harus Diisi !'
-        ));
-
         $this->form_validation->set_rules('jumlah_anak', 'Jumlah Anak Asuh', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
@@ -52,11 +48,7 @@ class Profil extends CI_Controller
         $this->form_validation->set_rules('nomor_rekening', 'Nomor Rekening', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
-
-        $this->form_validation->set_rules('npwp', 'NPWP Panti Asuhan', 'required', array(
-            'required' => '%s Harus Diisi !'
-        ));
-
+        
         $this->form_validation->set_rules('nomor_telepon', 'Nomor Telepon Panti Asuhan', 'required', array(
             'required' => '%s Harus Diisi !'
         ));

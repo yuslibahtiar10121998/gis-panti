@@ -20,7 +20,7 @@ font-size: 13px;"> Tanggal :
     <a href="<?= base_url('login') ?>" class="btn btn-success square-btn-adjust">Silahkan Login</a> 
 <?php }else{ ?>
     Nama : <?= $this->session->userdata('user')->nama_admin ?>
-    <a href="<?= base_url('login/logout') ?>" class="btn btn-danger square-btn-adjust">Logout</a>
+    <a href="<?= base_url('webgis') ?>" class="btn btn-danger square-btn-adjust">Logout</a>
 <?php } ?>
 </div>
 </nav>   

@@ -72,8 +72,8 @@ body {
 
                         <div class="form-group">
                             <label></label>
-                            <button type="submit" class="btn btn-sm btn-info">Login</button>
-                            <a href="<?= base_url() ?>" class="btn btn-sm btn-success">Kembali Ke Web</a>
+                            <button type="submit" class="btn btn-sm btn-primary">Login</button>
+                            <!-- <a href="<?= base_url() ?>" class="btn btn-sm btn-success">Kembali Ke Web</a> -->
                         </div>
 
                         <?php echo form_close() ?>

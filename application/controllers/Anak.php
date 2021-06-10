@@ -30,7 +30,15 @@ class Anak extends CI_Controller
                 'required' => '%s Harus Diisi !'
             ));
 
-            $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required', array(
+            $this->form_validation->set_rules('kelamin_id', 'Jenis Kelamin', 'required', array(
+                'required' => '%s Harus Diisi !'
+            ));
+
+            $this->form_validation->set_rules('pendidikan_id', 'Pendidikan', 'required', array(
+                'required' => '%s Harus Diisi !'
+            ));
+
+            $this->form_validation->set_rules('status_id', 'status', 'required', array(
                 'required' => '%s Harus Diisi !'
             ));
 
@@ -51,16 +59,17 @@ class Anak extends CI_Controller
                     'title' => 'Input Data Anak',
                     'isi'   => 'v_input_dataanak',
                     "list_pendidikan" => get_pendidikan(),
-                    "list_status" => get_status()
+                    "list_status" => get_status(),
+                    "list_kelamin" => get_kelamin()
                 );
                 $this->load->view('layout/v_wrapper', $data, FALSE);
             } else {
                 $data = array(
                     'panas_id' => get_user()->panas_id,
-                    'pendidikan_id' => $this->input->post('pendidikan_id'),
-                    'status_id' => $this->input->post('status_id'),
+                    'pendidikan_id'          => $this->input->post('pendidikan_id'),
+                    'status_id'              => $this->input->post('status_id'),
+                    'kelamin_id'             => $this->input->post('kelamin_id'),
                     'nama_lengkap'           => $this->input->post('nama_lengkap'),
-                    'jenis_kelamin'          => $this->input->post('jenis_kelamin'),
                     'asal_tempat_lahir'      => $this->input->post('asal_tempat_lahir'),
                     'tanggal_lahir'          => $this->input->post('tanggal_lahir'),
                     'umur'                   => $this->input->post('umur'),
@@ -76,7 +85,8 @@ class Anak extends CI_Controller
                 'title' => 'Input Data Anak Asuh',
                 'isi'   => 'v_input_dataanak',
                 "list_pendidikan" => get_pendidikan(),
-                "list_status" => get_status()
+                "list_status" => get_status(),
+                "list_kelamin" => get_kelamin()
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
         }
@@ -84,11 +94,20 @@ class Anak extends CI_Controller
 
     public function edit($id_anak)
     {
+
         $this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
 
-        $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'required', array(
+        $this->form_validation->set_rules('kelamin_id', 'Jenis Kelamin', 'required', array(
+            'required' => '%s Harus Diisi !'
+        ));
+
+        $this->form_validation->set_rules('pendidikan_id', 'Pendidikan', 'required', array(
+            'required' => '%s Harus Diisi !'
+        ));
+
+        $this->form_validation->set_rules('status_id', 'status', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
 
@@ -109,22 +128,22 @@ class Anak extends CI_Controller
             $data = array(
                 'title' => 'Edit Data Anak',
                 'anak'  => $this->m_anak->detail($id_anak),
-                "list_pendidikan" => $this->m_anak->tampil(['panas_id' => get_user()->id_panas]),
-                "list_status" => $this->m_anak->tampil(['panas_id' => get_user()->id_panas]),
+                "list_pendidikan" => get_pendidikan(),
+                "list_status" => get_status(),
+                "list_kelamin" => get_kelamin(),
                 'isi'   => 'v_edit_dataanak'
             );
             $this->load->view('layout/v_wrapper', $data, FALSE);
         } else {
-            $data = array(
-
-                'id_anak'                => $id_anak,
+            $data = array(    
+                'id_anak' => $id_anak,
+                'pendidikan_id'          => $this->input->post('pendidikan_id'),
+                'status_id'              => $this->input->post('status_id'),
+                'kelamin_id'             => $this->input->post('kelamin_id'),
                 'nama_lengkap'           => $this->input->post('nama_lengkap'),
-                'jenis_kelamin'          => $this->input->post('jenis_kelamin'),
                 'asal_tempat_lahir'      => $this->input->post('asal_tempat_lahir'),
                 'tanggal_lahir'          => $this->input->post('tanggal_lahir'),
                 'umur'                   => $this->input->post('umur'),
-                'pendidikan_id'             => $this->input->post('pendidikan_id'),
-
             );
             $this->m_anak->edit($data);
             $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');

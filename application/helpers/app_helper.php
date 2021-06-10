@@ -66,16 +66,16 @@ function get_status($id_status = null)
     return $data_status[$id_status];
 }
 
-// function get_kelamin($id_kelamin = null)
-// {
-//     $data_kelamin = [
-//         ID_LAKI_LAKI => "LAKI-LAKI",
-//         ID_PEREMPUAN => "PEREMPUAN",
-//     ];
+function get_kelamin($id_kelamin = null)
+{
+    $data_kelamin = [
+        ID_LAKI_LAKI => "LAKI-LAKI",
+        ID_PEREMPUAN => "PEREMPUAN",
+    ];
 
-//     if ($id_kelamin == null) {
-//         return $data_kelamin;
-//     }
+    if ($id_kelamin == null) {
+        return $data_kelamin;
+    }
 
-//     return $data_kelamin[$id_kelamin];
-// }
+    return $data_kelamin[$id_kelamin];
+}

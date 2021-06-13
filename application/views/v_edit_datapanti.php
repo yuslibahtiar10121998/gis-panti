@@ -54,14 +54,14 @@
                 </select>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Jenis Panti Asuhan</label>
                 <select name="jenis_panas" class="form-control">
                     <option value="<?= $panti->jenis_panas ?>"><?= $panti->jenis_panas ?></option>
                     <option value="PSAA"> PSAA </option>
                     <option value="LKSA"> LKSA </option>
                 </select>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label>Jumlah Anak Asuh</label>
@@ -100,12 +100,12 @@
 
             <div class="form-group">
                 <label>Latitude</label>
-                <input id="Latitude" name="latitude" placeholder="Latitude" value="<?= $panti->latitude ?>" class="form-control" readonly />
+                <input id="Latitude" name="latitude" placeholder="Latitude" value="<?= $panti->latitude ?>" class="form-control"  />
             </div>
 
             <div class="form-group">
                 <label>Longitude</label>
-                <input id="Longitude" name="longitude" placeholder="Longitude" value="<?= $panti->longitude ?>" class="form-control" readonly />
+                <input id="Longitude" name="longitude" placeholder="Longitude" value="<?= $panti->longitude ?>" class="form-control"  />
             </div>
 
             <img src="<? base_url('gambar/' . $sekolah->gambar) ?>" height="100px" width="100px">

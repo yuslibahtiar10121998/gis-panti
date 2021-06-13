@@ -12,7 +12,7 @@ class M_panti extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_panas');
         $this->db->join('tbl_kecamatan', 'tbl_panas.kecamatan_id = tbl_kecamatan.id_kecamatan');
-        $this->db->join('tbl_admin', 'tbl_panas.id_panas = tbl_admin.panas_id');
+        $this->db->join('tbl_admin', 'tbl_panas.id_panas = tbl_admin.panas_id',"left");
         if (!empty($where)) {
             $this->db->where($where);
         }

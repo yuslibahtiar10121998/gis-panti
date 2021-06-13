@@ -52,14 +52,14 @@
                 </select>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Jenis Panti Asuhan</label>
                 <select name="jenis_panas" class="form-control">
                     <option value=""> Pilih Jenis Panti Asuhan</option>
                     <option value="PSAA"> PSAA </option>
                     <option value="LKSA"> LKSA </option>
                 </select>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label>Jumlah Anak Asuh</label>
@@ -98,12 +98,12 @@
 
             <div class="form-group">
                 <label>Latitude</label>
-                <input id="Latitude" name="latitude" placeholder="Latitude" <?= set_value('latitude') ?> class="form-control" readonly />
+                <input id="Latitude" name="latitude" placeholder="Latitude" <?= set_value('latitude') ?> class="form-control" />
             </div>
 
             <div class="form-group">
                 <label>Longitude</label>
-                <input id="Longitude" name="longitude" placeholder="Longitude" <?= set_value('longitude') ?> class="form-control" readonly />
+                <input id="Longitude" name="longitude" placeholder="Longitude" <?= set_value('longitude') ?> class="form-control" />
             </div>
 
             <div class="form-group">

@@ -34,16 +34,11 @@
                                 <th width="30px">:</th>
                                 <td><?= $panti->nama_panas ?></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <th width="200px">Jenis Panti Asuhan</th>
                                 <th width="30px">:</th>
                                 <td><?= $panti->jenis_panas ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Pimpinan Panti Asuhan</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->pimpinan_panas ?></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <th width="200px">Jumlah anak Asuh</th>
                                 <th width="30px">:</th>
@@ -63,11 +58,6 @@
                                 <th width="200px">Nomor Rekening</th>
                                 <th width="30px">:</th>
                                 <td><?= $panti->nomor_rekening ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">NPWP Panti Asuhan</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->npwp ?></td>
                             </tr>
                             <tr>
                                 <th width="200px">Nomor Telepon</th>
@@ -104,10 +94,8 @@
         L.marker([<?= $panti->latitude ?>, <?= $panti->longitude ?>], {
                 icon: icon_panti
             }).addTo(mymap)
-            .bindPopup("<img src='<?= base_url('gambar/' . $panti->gambar) ?>
-                'width='100 % '></br>" + 
+            .bindPopup(
                 "<b>Nama Panti : <?= $panti->nama_panas ?></b><br/>" +
-                "Alamat : <?= $panti->alamat ?></br>" +
                 "No.Telp : <?= $panti->nomor_telepon ?></br>").openPopup();;
     </script>
 

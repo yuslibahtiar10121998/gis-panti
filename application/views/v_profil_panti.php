@@ -20,11 +20,6 @@
                 <td><?= $value->nama_panas ?></td>
             </tr>
             <tr>
-                <th width="200px">Jenis Panti Asuhan</th>
-                <th width="30px">:</th>
-                <td><?= $value->jenis_panas ?></td>
-            </tr>
-            <tr>
                 <th width="200px">Jumlah anak Asuh</th>
                 <th width="30px">:</th>
                 <td><?= $value->jumlah_anak ?></td>

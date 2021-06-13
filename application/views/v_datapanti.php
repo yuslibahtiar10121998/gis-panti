@@ -17,7 +17,7 @@
                 <tr>
                     <th>No</th>
                     <th>Nama Panti</th>
-                    <th>Jenis Panti</th>
+                    <!-- <th>Jenis Panti</th> -->
                     <th>Jumlah Anak</th>
                     <th>Daya Tampung</th>
                     <th>Alamat</th>
@@ -36,7 +36,7 @@
                     <tr>
                         <td> <?= $no++; ?></td>
                         <td> <?= $value->nama_panas ?></td>
-                        <td> <?= $value->jenis_panas ?></td>
+                        <!-- <td> <?= $value->jenis_panas ?></td> -->
                         <td> <?= $value->jumlah_anak ?></td>
                         <td> <?= $value->daya_tampung ?></td>
                         <td> <?= $value->alamat ?></td>

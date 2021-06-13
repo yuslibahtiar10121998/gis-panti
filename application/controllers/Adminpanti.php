@@ -67,7 +67,7 @@ class Adminpanti extends CI_Controller
             );
             $this->m_adminpanti->simpan($data);
             $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
-            redirect('adminpanti/input');
+            redirect('adminpanti');
         }
     }
 

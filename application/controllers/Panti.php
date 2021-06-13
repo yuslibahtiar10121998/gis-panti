@@ -30,9 +30,9 @@ class Panti extends CI_Controller
                 'required' => '%s Harus Diisi !'
             ));
 
-            $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
-                'required' => '%s Harus Dipilih !'
-            ));
+            // $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
+            //     'required' => '%s Harus Dipilih !'
+            // ));
 
             $this->form_validation->set_rules('jumlah_anak', 'Jumlah Anak Asuh', 'required', array(
                 'required' => '%s Harus Diisi !'
@@ -88,13 +88,11 @@ class Panti extends CI_Controller
                         'kecamatan_id'      => $this->input->post('kecamatan_id'),
                         'tahun_berdiri'     => $this->input->post('tahun_berdiri'),
                         'nama_panas'        => $this->input->post('nama_panas'),
-                        'jenis_panas'       => $this->input->post('jenis_panas'),
-                        'pimpinan_panas'    => $this->input->post('pimpinan_panas'),
+                        // 'jenis_panas'       => $this->input->post('jenis_panas'),
                         'jumlah_anak'       => $this->input->post('jumlah_anak'),
                         'daya_tampung'      => $this->input->post('daya_tampung'),
                         'alamat'            => $this->input->post('alamat'),
                         'nomor_rekening'    => $this->input->post('nomor_rekening'),
-                        'npwp'              => $this->input->post('npwp'),
                         'nomor_telepon'     => $this->input->post('nomor_telepon'),
                         'jumlah_pengurus'   => $this->input->post('jumlah_pengurus'),
                         'latitude'          => $this->input->post('latitude'),
@@ -133,9 +131,9 @@ class Panti extends CI_Controller
                 'required' => '%s Harus Diisi !'
             ));
 
-            $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
-                'required' => '%s Harus Dipilih !'
-            ));
+            // $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
+            //     'required' => '%s Harus Dipilih !'
+            // ));
 
             $this->form_validation->set_rules('jumlah_anak', 'Jumlah Anak Asuh', 'required', array(
                 'required' => '%s Harus Diisi !'
@@ -196,13 +194,11 @@ class Panti extends CI_Controller
                         'kecamatan_id'      => $this->input->post('kecamatan_id'),
                         'tahun_berdiri'     => $this->input->post('tahun_berdiri'),
                         'nama_panas'        => $this->input->post('nama_panas'),
-                        'jenis_panas'       => $this->input->post('jenis_panas'),
-                        'pimpinan_panas'    => $this->input->post('pimpinan_panas'),
+                        // 'jenis_panas'       => $this->input->post('jenis_panas'),
                         'jumlah_anak'       => $this->input->post('jumlah_anak'),
                         'daya_tampung'      => $this->input->post('daya_tampung'),
                         'alamat'            => $this->input->post('alamat'),
                         'nomor_rekening'    => $this->input->post('nomor_rekening'),
-                        'npwp'              => $this->input->post('npwp'),
                         'nomor_telepon'     => $this->input->post('nomor_telepon'),
                         'jumlah_pengurus'   => $this->input->post('jumlah_pengurus'),
                         'latitude'          => $this->input->post('latitude'),
@@ -220,13 +216,11 @@ class Panti extends CI_Controller
                     'kecamatan_id'      => $this->input->post('kecamatan_id'),
                     'tahun_berdiri'     => $this->input->post('tahun_berdiri'),
                     'nama_panas'        => $this->input->post('nama_panas'),
-                    'jenis_panas'       => $this->input->post('jenis_panas'),
-                    'pimpinan_panas'    => $this->input->post('pimpinan_panas'),
+                    // 'jenis_panas'       => $this->input->post('jenis_panas'),
                     'jumlah_anak'       => $this->input->post('jumlah_anak'),
                     'daya_tampung'      => $this->input->post('daya_tampung'),
                     'alamat'            => $this->input->post('alamat'),
                     'nomor_rekening'    => $this->input->post('nomor_rekening'),
-                    'npwp'              => $this->input->post('npwp'),
                     'nomor_telepon'     => $this->input->post('nomor_telepon'),
                     'jumlah_pengurus'   => $this->input->post('jumlah_pengurus'),
                     'latitude'          => $this->input->post('latitude'),

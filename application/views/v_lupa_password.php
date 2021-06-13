@@ -39,7 +39,7 @@ body {
                 <div class="panel">
                 <div class="text-center">
                     <div class="panel-heading">
-                    <h3 style="color: lime;"><span style="color: cyan;">Admin </span>Login</h3>
+                    <h3 style="color: lime;"><span style="color: cyan;">Reset </span>Password</h3>
                     </div>
                     </div>
                     <div class="panel-body">
@@ -57,23 +57,18 @@ body {
                             echo '</div>';
                         }
 
-                        echo form_open('login/index');
+                        echo form_open('login/lupapassword');
                         ?>
 
                         <div class="form-group">
-                            <label>Username</label>
-                            <input name="username" placeholder="Username" <?= set_value('username') ?> class="form-control" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" name="password" placeholder="Password" <?= set_value('password') ?> class="form-control" />
+                            <label>Email</label>
+                            <input name="email" placeholder="Masukkan email anda" <?= set_value('email') ?> class="form-control" />
                         </div>
 
                         <div class="form-group">
                             <label></label>
-                            <button type="submit" class="btn btn-sm btn-primary">Login</button>
-                            <!-- <a href="<?= base_url('login/lupapassword') ?>" class="btn btn-sm btn-success">Lupa password</a> -->
+                            <button type="submit" class="btn btn-sm btn-primary">Reset</button>
+                            <a href="<?= base_url('login/lupapassword') ?>" class="btn btn-sm btn-success">Kembali Login</a>
                         </div>
 
                         <?php echo form_close() ?>

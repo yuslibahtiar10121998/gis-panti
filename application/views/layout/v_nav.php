@@ -17,20 +17,21 @@
                     <li>
                         <a href="<?= base_url('adminpanti') ?>"><i class="fa fa-list fa-2x"></i> List Admin Panti</a>
                     </li>
+                    <li>
+                        <a href="<?= base_url('rekap') ?>"><i class="fa fa-book fa-2x"></i> Rekap Data Statistik</a>
+                    </li>
 
                 <?php else : ?>
                     <li>
                         <a href="<?= base_url('profil') ?>"><i class="fa fa-home fa-2x"></i> Profil Panti Asuhan</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('profiladmin') ?>"><i class="fa fa-user fa-2x"></i>  Profil Admin Panti</a>
+                        <a href="<?= base_url('profiladmin') ?>"><i class="fa fa-user fa-2x"></i> Profil Admin Panti</a>
                     </li>
                     <li>
                         <a href="<?= base_url('anak') ?>"><i class="fa fa-users fa-2x"></i> Anak Asuh</a>
                     </li>
-                    <li>
-                        <a href="<?= base_url('rekap') ?>"><i class="fa fa-book fa-2x"></i> Rekap Data Statistik</a>
-                    </li>
+
                 <?php endif; ?>
 
                 <!-- menu input -->
@@ -52,7 +53,7 @@
                             </li>
                         <?php endif; ?>
                     </ul> -->
-                <?php } ?>
+            <?php } ?>
         </ul>
 
     </div>

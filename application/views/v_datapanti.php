@@ -31,7 +31,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php $no = 1;
+                <?php $no = $this->uri->segment('3') + 1;
                 foreach ($panti as $key => $value) { ?>
                     <tr>
                         <td> <?= $no++; ?></td>
@@ -57,5 +57,8 @@
             </tbody>
 
         </table>
+        <?php
+        echo $this->pagination->create_links();
+        ?>
     </div>
 </div>

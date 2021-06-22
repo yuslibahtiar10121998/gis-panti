@@ -6,6 +6,7 @@ class Anak extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_anak');
+
     }
 
     public function index()

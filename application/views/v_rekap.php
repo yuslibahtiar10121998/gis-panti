@@ -1,5 +1,7 @@
 <div class="col-sm-12">
-    <a class="btn btn-sm btn-success">Rekap</a>
+    <?= form_open('rekap/do_rekap') ?>
+    <button name="wilayah_id" type="submit" value="<?= get_user()->wilayah_id ?>" class="btn btn-sm btn-success">Rekap</button>
+    <?= form_close(); ?>
     <div class="table-responsive">
         <table class="table table-responsive table-bordered" id="dataTables-example">
             <thead>

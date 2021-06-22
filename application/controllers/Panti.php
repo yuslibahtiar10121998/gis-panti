@@ -6,6 +6,8 @@ class Panti extends CI_Controller
     {
         parent::__construct();
         $this->load->model('m_panti');
+        $this->load->model('m_data');
+        $this->load->helper(array('url'));
     }
 
     public function index()
@@ -16,7 +18,19 @@ class Panti extends CI_Controller
             'isi'   => 'v_datapanti'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
+        // $this->load->database();
+		// $jumlah_data = $this->m_data->jumlah_data();
+		// $this->load->library('pagination');
+		// $config['base_url'] = base_url().'index.php/panti/index/';
+		// $config['total_rows'] = $jumlah_data;
+		// $config['per_page'] = 2;
+		// $from = $this->uri->segment(3);
+		// $this->pagination->initialize($config);		
+		// $data['tbl_panas'] = $this->m_data->data($config['per_page'],$from);
+		// $this->load->view('v_datapanti',$data);
     }
+
+
     public function batal()
     {
         redirect('panti');

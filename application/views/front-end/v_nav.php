@@ -17,7 +17,7 @@
 					<nav class="cl-effect-1">
 						<ul class="nav navbar-nav">
 							<li><a href="<?= base_url('webgis') ?>">Home</a></li>
-								<li><a href="<?= base_url('webgis/about') ?>">About</a></li>
+								<!-- <li><a href="<?= base_url('webgis/about') ?>">About</a></li> -->
 								<div class="clearfix"></div>
 						</ul>
 					</nav>

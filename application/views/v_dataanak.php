@@ -13,7 +13,7 @@
         <td>
             <a href="<?= base_url('anak/input/' . $value->id_anak) ?>" class="btn btn-sm-40 btn-success">Tambah</a>
         </td>
-        <table class="table table-responsive table-bordered" id="dataTables-example">
+        <table class="table table-responsive table-bordered" id="datatables">
             <thead>
                 <tr>
                     <th>No</th>
@@ -45,8 +45,6 @@
                     </tr>
                 <?php } ?>
             </tbody>
-
         </table>
     </div>
-
 </div>

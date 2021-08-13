@@ -3,15 +3,6 @@
         <div class="panel-heading">Detail Data Rekap</div>
         <div class="panel-body">
             <div class="row">
-                <!-- download statistik -->
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="panel panel-info">
-                        <div class="panel-heading"><spin>Download Data Rekap :   </spin><a class="btn btn-sm-40 btn-info">Download</a></div>
-                    </div>
-                </div>
-                <!-- download statistik -->
-            </div>
-            <div class="row">
                 <!-- bar chart    -->
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <div class="panel panel-success">

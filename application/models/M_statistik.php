@@ -2,21 +2,42 @@
 
 class M_statistik extends CI_Model
 {
-    public function statistik_jumlah()
+    public function jmlpendidikan($minvalue, $maxvalue, $tahun)
     {
-        $sql = "SELECT tahun , jumlah_anak FROM tbl_statistik_anak ORDER BY tahun ASC";
-        return $this->db->query($sql)->result();
+        $this->db->select('kecamatan_id');
+        $this->db->from('tbl_rekap');
+        $this->db->where("tahun", $tahun);
+        $this->db->where("(sd+smp+sma+tidak_sekolah) BETWEEN '" . $minvalue . "' AND '" . $maxvalue . "'");
+        $this->db->order_by('tahun', 'desc');
+        return $this->db->get()->result_array();
     }
 
-    public function statistik_pendidikan()
+    public function jmlstatus($minvalue, $maxvalue, $tahun)
     {
-        $sql = "SELECT sd_sederajat , smp_sederajat , sma_sederajat , tidak_sekolah , tahun FROM tbl_statistik_pendidikan ORDER BY tahun ASC";
-        return $this->db->query($sql)->result();
+        $this->db->select('kecamatan_id');
+        $this->db->from('tbl_rekap');
+        $this->db->where("tahun", $tahun);
+        $this->db->where("(yatim+piatu+yatim_piatu) BETWEEN '" . $minvalue . "' AND '" . $maxvalue . "'");
+        $this->db->order_by('tahun', 'desc');
+        return $this->db->get()->result();
     }
 
-    public function statistik_status()
+    public function jmlkelamin($minvalue, $maxvalue, $tahun)
     {
-        $sql = "SELECT yatim , piatu , yatim_piatu , tahun FROM tbl_statistik_status ORDER BY tahun ASC";
-        return $this->db->query($sql)->result();
+        $this->db->select('*');
+        $this->db->from('tbl_rekap');
+        $this->db->where("tahun", $tahun);
+        $this->db->where("(laki_laki+perempuan) BETWEEN '" . $minvalue . "' AND '" . $maxvalue . "'");
+        $this->db->order_by('tahun', 'desc');
+        return $this->db->get()->result();
+    }
+
+    public function get_statistik($id_kecamatan, $tahun = null, $jenis_data = null)
+    {
+        if ($tahun == null) {
+            $tahun  = date('Y');
+        }
+        $this->db->order_by("updated_at", "desc");
+        return $this->db->get_where("tbl_rekap", ['kecamatan_id' => $id_kecamatan, 'tahun' => $tahun])->row_array();
     }
 }

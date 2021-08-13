@@ -9,13 +9,13 @@
             <?php if ($this->session->userdata('user') <> "") { ?>
                 <?php if ($this->session->userdata('user')->is_dinas == '1') : ?>
                     <li>
-                        <a href="<?= base_url('profildinas') ?>"><i class="fa fa-user fa-2x"></i> Profil Admin Dinas</a>
+                        <a href="<?= base_url('profildinas') ?>"><i class="fa fa-user fa-2x"></i> Profil Superadmin</a>
                     </li>
                     <li>
                         <a href="<?= base_url('panti') ?>"><i class="fa fa-list-ul fa-2x"></i> List Panti Asuhan</a>
                     </li>
                     <li>
-                        <a href="<?= base_url('adminpanti') ?>"><i class="fa fa-list fa-2x"></i> List Admin Panti</a>
+                        <a href="<?= base_url('adminpanti') ?>"><i class="fa fa-list fa-2x"></i> List Admin</a>
                     </li>
                     <li>
                         <a href="<?= base_url('rekap') ?>"><i class="fa fa-book fa-2x"></i> Rekap Data Statistik</a>

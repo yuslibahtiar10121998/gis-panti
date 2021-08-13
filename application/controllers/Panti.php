@@ -18,16 +18,6 @@ class Panti extends CI_Controller
             'isi'   => 'v_datapanti'
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
-        // $this->load->database();
-		// $jumlah_data = $this->m_data->jumlah_data();
-		// $this->load->library('pagination');
-		// $config['base_url'] = base_url().'index.php/panti/index/';
-		// $config['total_rows'] = $jumlah_data;
-		// $config['per_page'] = 2;
-		// $from = $this->uri->segment(3);
-		// $this->pagination->initialize($config);		
-		// $data['tbl_panas'] = $this->m_data->data($config['per_page'],$from);
-		// $this->load->view('v_datapanti',$data);
     }
 
 
@@ -47,6 +37,9 @@ class Panti extends CI_Controller
             // $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
             //     'required' => '%s Harus Dipilih !'
             // ));
+            $this->form_validation->set_rules('kecamatan_id', 'Silahkan Pilih Kecamatan', 'required', array(
+                'required' => '%s Terlebih Dahulu !'
+            ));
 
             $this->form_validation->set_rules('jumlah_anak', 'Jumlah Anak Asuh', 'required', array(
                 'required' => '%s Harus Diisi !'
@@ -148,6 +141,10 @@ class Panti extends CI_Controller
             // $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
             //     'required' => '%s Harus Dipilih !'
             // ));
+
+            $this->form_validation->set_rules('kecamatan_id', 'Silahkan Pilih Kecamatan', 'required', array(
+                'required' => '%s Terlebih Dahulu !'
+            ));
 
             $this->form_validation->set_rules('jumlah_anak', 'Jumlah Anak Asuh', 'required', array(
                 'required' => '%s Harus Diisi !'

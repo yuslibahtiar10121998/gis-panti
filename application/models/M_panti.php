@@ -46,6 +46,7 @@ class M_panti extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tbl_panas');
+        $this->db->join('tbl_kecamatan', 'tbl_panas.kecamatan_id = tbl_kecamatan.id_kecamatan');
         $this->db->where('id_panas', $id_panas);
         return $this->db->get()->row();
     }

@@ -13,7 +13,7 @@
         <td>
             <a href="<?= base_url('adminpanti/input/' . $value->id_admin) ?>" class="btn btn-sm-40 btn-success">Tambah</a>
         </td>
-        <table class="table table-responsive table-bordered" id="dataTables-example">
+        <table class="table table-bordered table-hover table-striped" id="datatables">
             <thead>
                 <tr>
                     <th>No</th>

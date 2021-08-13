@@ -11,7 +11,7 @@ class Profildinas extends CI_Controller
     public function index()
     {
         $data = array(
-            'title' => 'Profil Admin Panti Asuhan',
+            'title' => 'Profil Superadmin',
             'profildinas' => $this->m_profildinas->tampil(['id_admin' => get_user()->id_admin]),
             'isi'   => 'v_profil_dinas'
         );

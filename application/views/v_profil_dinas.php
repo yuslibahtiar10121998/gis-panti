@@ -10,32 +10,42 @@
 
     <div class="table-responsive">
         <?php foreach ($profildinas as $key => $value) ?>
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-body">
         <td>
             <a href="<?= base_url('profildinas/edit/' . $value->id_admin) ?>" class="btn btn-sm-40 btn-success">Edit Profil Admin</a>
         </td>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th width="200px">Nama Admin</th>
-                    <th width="30px">:</th>
-                    <td><?= $value->nama_admin ?></td>
-                </tr>
-                <tr>
-                    <th width="200px">Email</th>
-                    <th width="30px">:</th>
-                    <td><?= $value->email ?></td>
-                </tr>
-                <tr>
-                    <th width="200px">Nomor Telepon</th>
-                    <th width="30px">:</th>
-                    <td><?= $value->nomor_telepon ?></td>
-                </tr>
-                <tr>
-                    <th width="200px">Username</th>
-                    <th width="30px">:</th>
-                    <td><?= $value->username ?></td>
-                </tr>
-            </thead>
-        </table>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nama Admin</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $value->nama_admin ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $value->email ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nomor Telepon</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $value->nomor_telepon ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Username</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $value->username ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

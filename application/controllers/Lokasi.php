@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Webgis extends CI_Controller
+class Lokasi extends CI_Controller
 {
     public function __construct()
     {
@@ -29,7 +29,6 @@ class Webgis extends CI_Controller
             if (empty($tahun)) {
                 echo "<script>alert('Tahun harus dipilih');</script>";
             }
-            
 
             if (!empty($jns_data) && $awal >= 0 && $akhir >= 0 && !empty($tahun)) {
                 if ($jns_data == "pendidikan") {
@@ -39,7 +38,7 @@ class Webgis extends CI_Controller
                         'tahun' => $tahun,
                         'title' => 'Web GIS Panti Asuhan',
                         'panti' => $this->m_panti->tampil(),
-                        'isi'   => 'v_webgis'
+                        'isi'   => 'v_lokasi'
                     ];
                     $this->load->view('front-end/v_wrapper', $data, FALSE);
                 } elseif ($jns_data == "status") {
@@ -49,7 +48,7 @@ class Webgis extends CI_Controller
                         'tahun' => $tahun,
                         'title' => 'Web GIS Panti Asuhan',
                         'panti' => $this->m_panti->tampil(),
-                        'isi'   => 'v_webgis'
+                        'isi'   => 'v_lokasi'
                     ];
                     $this->load->view('front-end/v_wrapper', $data, FALSE);
                 } elseif ($jns_data == "jk") {
@@ -59,7 +58,7 @@ class Webgis extends CI_Controller
                         'tahun' => $tahun,
                         'title' => 'Web GIS Panti Asuhan',
                         'panti' => $this->m_panti->tampil(),
-                        'isi'   => 'v_webgis'
+                        'isi'   => 'v_lokasi'
                     ];
                     $this->load->view('front-end/v_wrapper', $data, FALSE);
                 }
@@ -67,7 +66,7 @@ class Webgis extends CI_Controller
                 $data = array(
                     'title' => 'Web GIS Panti Asuhan',
                     'panti' => $this->m_panti->tampil(),
-                    'isi'   => 'v_webgis'
+                    'isi'   => 'v_lokasi'
                 );
                 $this->load->view('front-end/v_wrapper', $data, FALSE);
             }
@@ -75,20 +74,10 @@ class Webgis extends CI_Controller
             $data = array(
                 'title' => 'Web GIS Panti Asuhan',
                 'panti' => $this->m_panti->tampil(),
-                'isi'   => 'v_webgis'
+                'isi'   => 'v_lokasi'
             );
             $this->load->view('front-end/v_wrapper', $data, FALSE);
         }
-        
-    }
-
-    public function about()
-    {
-        $data = array(
-            'title' => 'Web GIS Panti Asuhan',
-            'isi'   => 'v_about'
-        );
-        $this->load->view('front-end/v_wrapper', $data, FALSE);
     }
 
     public function detail($id_panas)

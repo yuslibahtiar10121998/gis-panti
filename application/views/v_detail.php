@@ -21,63 +21,66 @@
                 </div>
             </div>
         </div>
-
         <div class="col-sm-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">Data Panti Asuhan</div>
                 <div class="panel-body">
 
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th width="200px">Nama Panti Asuhan</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->nama_panas ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Jumlah anak Asuh</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->jumlah_anak ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Daya Tampung</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->daya_tampung ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Alamat Panti Asuhan</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->alamat ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Kecamatan</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->nama_kecamatan ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Nomor Rekening</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->nomor_rekening ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Nomor Telepon</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->nomor_telepon ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Jumlah Pengurus</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->jumlah_pengurus ?></td>
-                            </tr>
-                            <tr>
-                                <th width="200px">Tahun Berdiri</th>
-                                <th width="30px">:</th>
-                                <td><?= $panti->tahun_berdiri ?></td>
-                            </tr>
-
-                        </thead>
-                    </table>
-
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nama Panti</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->nama_panas ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Jumlah Anak</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->jumlah_anak ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Daya Tampung</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->daya_tampung ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Alamat Panti</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->alamat ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Kecamatan</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->nama_kecamatan ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nomor Rekening</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->nomor_rekening ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Nomor Telapon</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->nomor_telepon ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Jumlah Pengurus</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->jumlah_pengurus ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Tahun Berdiri</label>
+                        <div class="col-sm-10">
+                            <input type="text" value="<?= $panti->tahun_berdiri ?>" class="form-control" readonly />
+                        </div>
+                    </div>
+ -->
                 </div>
             </div>
         </div>

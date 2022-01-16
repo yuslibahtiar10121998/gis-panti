@@ -7,6 +7,18 @@
         echo '</div>';
     }
     ?>
+    <style>
+.zoom {
+  transition: transform .2s; /* Animation */
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
     <div class="table-responsive">
         <?php foreach ($panti as $key => $value) ?>
         <td>
@@ -46,7 +58,7 @@
                         <td> <?= $value->jumlah_pengurus ?></td>
                         <td> <?= $value->latitude ?></td>
                         <td> <?= $value->longitude ?></td>
-                        <td> <img src="<?= base_url('gambar/' . $value->gambar) ?>" height="50px" width="70px"></td>
+                        <td> <img src="<?= base_url('gambar/' . $value->gambar) ?>" class="zoom" height="50px" width="70px"></td>
                         <td>
                             <a href="<?= base_url('panti/edit/' . $value->id_panas) ?>" class="btn btn-sm btn-info">Edit</a>
                             <a href="<?= base_url('panti/lihatanak/' . $value->id_panas) ?>" class="btn btn-sm btn-warning">Lihat anak</a>

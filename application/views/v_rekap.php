@@ -16,14 +16,24 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Tanggal Rekap</th>
+                    <th>Tahun</th>
+                    <th>Tanggal diperbaharui</th>
+                    <th>Opsi</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>20-03-2021</td>
-                </tr>
+                <?php $i = 0;foreach ($data_rekap as $rekap) : ?>
+                    <tr>
+                        <td><?= ++$i?></td>
+                        <td><?= $rekap['tahun']?></td>
+                        <td>
+                            <?= $rekap['updated_at']?>
+                        </td>
+                        <td>
+                            <a href="<?= base_url('rekap/detail_rekap')?>/<?= $rekap['wilayah_id']?>/<?= $rekap['tahun']?>" class="btn btn-primary">Lihat detail</a>
+                        </td>
+                    </tr>
+                    <?php endforeach;?>
             </tbody>
         </table>
     </div>

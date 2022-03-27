@@ -80,7 +80,6 @@
                             <input type="text" value="<?= $panti->tahun_berdiri ?>" class="form-control" readonly />
                         </div>
                     </div>
- -->
                 </div>
             </div>
         </div>

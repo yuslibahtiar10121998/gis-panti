@@ -11,9 +11,21 @@ class Rekap extends CI_Controller
 
     public function index()
     {
+        $wilayah_id = $this->session->userdata('user')->wilayah_id;
         $data = array(
             'title' => 'Rekap Data Statistik',
+            'data_rekap'=> $this->m_rekap->get_all_rekap($wilayah_id),
             'isi'   => 'v_rekap',
+        );
+        $this->load->view('layout/v_wrapper', $data, FALSE);
+    }
+
+    public function detail_rekap($wilayah_id = null , $tahun = null)
+    {
+        $data = array(
+            'title' => 'Detail Rekap',
+            'isi'   => 'v_lihat_rekap',
+            'all_rekap' => $this->m_rekap->get_all_rekap($wilayah_id,$tahun),
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }
@@ -45,6 +57,9 @@ class Rekap extends CI_Controller
                 array_push($data_rekap,$rekap_kecamatan);
             }
         }
+
+        // var_dump($kecamatan);
+        // die;
 
         $result = $this->m_rekap->insert_rekap($data_rekap);
         $this->session->set_flashdata('pesan', 'Data Berhasil Direkap !');

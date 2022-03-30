@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-primary">
-                <div class="panel-heading">Statistik</div>
+                <div class="panel-heading">Grafik Statistik</div>
                 <div class="panel-body">
 
                     <!-- <div class="row"> -->
@@ -153,17 +153,42 @@
                         </div>
                         <!-- /kelamin chart -->
                     <?php endif; ?>
-                    <!-- </div> -->
-
-                    <!-- ganti kolom -->
-                    <!-- <div class="row"> -->
-
-
-
-                    <!-- </div> -->
-                    <!-- /ganti kolom -->
 
                 </div>
+                
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Tabel Statistik</div>
+                    <div class="panel-body">
+                    <div class="table-responsive">
+        <table class="table table-responsive table-bordered" id="datatables">
+        <?php $jns_data = ['pendidikan' => ['sd','smp','sma','tidak_sekolah'],'jk' => ['perempuan','laki_laki'],'status' => ['yatim','yatim_piatu','piatu']];
+        $jml_row = count(@$jns_data[$jenis_data])?>
+        <table class="table table-responsive table-bordered" id="datatables">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Wilayah</th>
+                    <?php if(@$jns_data[$jenis_data] != null) : ?>
+                        <?php foreach ($jns_data[$jenis_data] as $value) : ?>
+                            <th><?= ucfirst(str_replace('_',' ',$value))?></th>
+                            <?php endforeach;?>
+                        <?php endif;?>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><?=  ucfirst($this->db->get_where('tbl_kecamatan', ['id_kecamatan' => $statistik['kecamatan_id'] ])->row_array()['nama_kecamatan']);?></td>
+                    <?php for ($i=0; $i < $jml_row; $i++) : ?>
+                        <td><?= $statistik[$jns_data[$jenis_data][$i]]?></td>
+                        <?php endfor;?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
             </div>
         </div>
     </div>

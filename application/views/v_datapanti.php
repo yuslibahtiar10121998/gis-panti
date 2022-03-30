@@ -7,7 +7,7 @@
         echo '</div>';
     }
     ?>
-    <style>
+<style>
 .zoom {
   transition: transform .2s; /* Animation */
   width: 150px;

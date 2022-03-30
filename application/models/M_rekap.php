@@ -35,6 +35,18 @@ class M_rekap extends CI_Model
             ->get()->row_array();
     }
 
+    public function get_all_rekap($wilayah_id = null, $tahun = null)
+    {
+        $this->db->order_by('tahun','desc');
+        $this->db->where('wilayah_id',$wilayah_id);
+        if($tahun != null){
+            $this->db->where('tahun',$tahun);
+        }else{
+        $this->db->group_by('tahun');
+        }
+        return $this->db->get('tbl_rekap')->result_array();
+    }
+
     public function statistik_jumlah()
     {
         $sql = "SELECT tahun , jumlah_anak FROM tbl_statistik_anak ORDER BY tahun ASC";

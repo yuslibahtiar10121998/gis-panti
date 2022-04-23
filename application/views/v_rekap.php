@@ -23,7 +23,10 @@
             </thead>
             <tbody>
                 <?php $i = 0;foreach ($data_rekap as $rekap) : ?>
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 6192d9faae175b63e41fa2d94ef267e8feb232e4
                     <tr>
                         <td><?= ++$i?></td>
                         <td><?= $rekap['tahun']?></td>

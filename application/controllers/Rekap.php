@@ -60,6 +60,9 @@ class Rekap extends CI_Controller
             }
         }
 
+        // var_dump($kecamatan);
+        // die;
+
         $result = $this->m_rekap->insert_rekap($data_rekap);
         $this->session->set_flashdata('pesan', 'Data Berhasil Direkap !');
         redirect('rekap');

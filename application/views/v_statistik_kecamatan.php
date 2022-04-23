@@ -2,7 +2,11 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-primary">
+<<<<<<< HEAD
                 <div class=" panel-heading">Grafik Statistik</div>
+=======
+                <div class="panel-heading">Grafik Statistik</div>
+>>>>>>> 6192d9faae175b63e41fa2d94ef267e8feb232e4
                 <div class="panel-body">
 
                     <!-- <div class="row"> -->

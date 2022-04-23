@@ -34,9 +34,6 @@ class Panti extends CI_Controller
                 'required' => '%s Harus Diisi !'
             ));
 
-            // $this->form_validation->set_rules('jenis_panas', 'Jenis Panti Asuhan', 'required', array(
-            //     'required' => '%s Harus Dipilih !'
-            // ));
             $this->form_validation->set_rules('kecamatan_id', 'Silahkan Pilih Kecamatan', 'required', array(
                 'required' => '%s Terlebih Dahulu !'
             ));

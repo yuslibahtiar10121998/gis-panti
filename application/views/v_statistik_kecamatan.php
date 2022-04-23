@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-primary">
-                <div class="panel-heading">Grafik Statistik</div>
+                <div class=" panel-heading">Grafik Statistik</div>
                 <div class="panel-body">
 
                     <!-- <div class="row"> -->
                     <!-- status chart -->
                     <!-- <div class="col-sm-8 col-sm-offset-2"> -->
                     <?php if ($jenis_data == "status") : ?>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 col-sm-offset-3">
                             <div class="panel panel-danger">
                                 <div class="panel-heading">
                                     Grafik Status Anak
@@ -55,7 +55,7 @@
                         <!-- /status chart -->
                     <?php elseif ($jenis_data == "jk") : ?>
                         <!-- kelamin chart -->
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 col-sm-offset-3">
                             <div class="panel panel-warning">
                                 <div class="panel-heading">
                                     Grafik jenis kelamin Anak
@@ -100,7 +100,7 @@
                         <!-- /kelamin chart -->
                     <?php elseif ($jenis_data == "pendidikan") : ?>
                         <!-- pendidikan chart -->
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 col-sm-offset-3">
                             <div class="panel panel-success">
                                 <div class="panel-heading">
                                     Grafik Pendidikan Anak

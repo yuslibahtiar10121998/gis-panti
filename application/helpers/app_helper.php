@@ -38,10 +38,10 @@ function get_kecamatan($id_wilayah = null)
 function get_pendidikan($id_pendidikan = null)
 {
     $data_pendidikan = [
-        ID_PEND_SD => "SD",
-        ID_PEND_SMP => "SMP",
-        ID_PEND_SMA => "SMA",
-        ID_PEND_TIDAK => "TIDAK"
+        ID_PEND_SD => "SD Sederajat",
+        ID_PEND_SMP => "SMP Sederajat",
+        ID_PEND_SMA => "SMA Sederajat",
+        ID_PEND_TIDAK => "Tidak Sekolah"
     ];
 
     if ($id_pendidikan == null) {
@@ -54,9 +54,9 @@ function get_pendidikan($id_pendidikan = null)
 function get_status($id_status = null)
 {
     $data_status = [
-        ID_STATUS_YATIM => "YATIM",
-        ID_STATUS_PIATU => "PIATU",
-        ID_STATUS_YPT => "YATIM DAN PIATU",
+        ID_STATUS_YATIM => "Yatim",
+        ID_STATUS_PIATU => "Piatu",
+        ID_STATUS_YPT => "Yatim dan Piatu",
     ];
 
     if ($id_status == null) {
@@ -69,8 +69,8 @@ function get_status($id_status = null)
 function get_kelamin($id_kelamin = null)
 {
     $data_kelamin = [
-        ID_LAKI_LAKI => "LAKI-LAKI",
-        ID_PEREMPUAN => "PEREMPUAN",
+        ID_LAKI_LAKI => "Laki-Laki",
+        ID_PEREMPUAN => "Perempuan",
     ];
 
     if ($id_kelamin == null) {

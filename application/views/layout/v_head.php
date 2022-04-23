@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+  <link rel="shourcut icon" href="panti.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?= $title ?></title>
@@ -23,6 +24,16 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#datatables').DataTable();
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#datatables2').DataTable();
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#datatables3').DataTable();
     });
   </script>
   <!-- METISMENU SCRIPTS -->

@@ -6,9 +6,9 @@
         <div class="panel-body">
 
             <?php
-            //code validasi data tidak boleh kosong
-            echo validation_errors('<div class="alert alert-danger alert-dismissable">
-                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>', '</div>');
+           //code validasi data tidak boleh kosong
+           echo validation_errors('<div class="alert alert-danger alert-dismissable">
+           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>', '</div>');
 
             //notifikasi data berhasil disimpan
             if ($this->session->flashdata('pesan')) {

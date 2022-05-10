@@ -1,5 +1,5 @@
 <div class="col-sm-12">
-    <h1>Statistik pendidikan <button class="btn btn-sm btn-primary">Lihat</button></h1>
+    <h1>Statistik pendidikan</h1>
     
     <div class="table-responsive">
         <table class="table table-responsive table-bordered" id="datatables">
@@ -36,7 +36,7 @@
         </table>
     </div>
 
-    <h1>Statistik Jenis kelamin <button class="btn btn-sm btn-primary">Lihat</button></h1>
+    <h1>Statistik Jenis kelamin</h1>
     <div class="table-responsive">
         <table class="table table-responsive table-bordered" id="datatables2">
             <thead>
@@ -64,7 +64,7 @@
         </table>
     </div>
 
-    <h1>Statistik Status <button class="btn btn-sm btn-primary">Lihat</button></h1>
+    <h1>Statistik Status</h1>
     <div class="table-responsive">
         <table class="table table-responsive table-bordered" id="datatables3">
             <thead>

@@ -68,14 +68,14 @@ class Rekap extends CI_Controller
         redirect('rekap');
     }
 
-    public function detailrekap()
+    public function chart_rekap()
     {
         $data = array(
             'title' => 'Detail Rekap',
             'jumlah' => $this->m_rekap->statistik_jumlah(),
             'pendidikan' => $this->m_rekap->statistik_pendidikan(),
             'status' => $this->m_rekap->statistik_status(),
-            'isi' => 'v_detail_rekap',
+            'isi' => 'v_chart_rekap',
         );
         $this->load->view('layout/v_wrapper', $data, FALSE);
     }

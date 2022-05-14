@@ -12,6 +12,8 @@
                     <th>Asal Tempat Lahir</th>
                     <th>Tanggal Lahir</th>
                     <th>Umur</th>
+                    <th>Nama Lengkap Ibu</th>
+                    <th>Nama Lengkap Ayah</th>
                     <th>Pendidikan</th>
                     <th>Status</th>
                 </tr>
@@ -26,6 +28,8 @@
                         <td> <?= $value['asal_tempat_lahir'] ?></td>
                         <td> <?= $value['tanggal_lahir'] ?></td>
                         <td> <?= $value['umur'] ?></td>
+                        <td> <?= $value['nama_lengkap_ibu'] ?></td>
+                        <td> <?= $value['nama_lengkap_ayah'] ?></td>
                         <td> <?= get_pendidikan($value['pendidikan_id']) ?></td>
                         <td> <?= get_status($value['status_id']) ?></td>
                     </tr>

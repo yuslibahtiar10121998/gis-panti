@@ -22,6 +22,8 @@
                     <th>Asal Tempat Lahir</th>
                     <th>Tanggal Lahir</th>
                     <th>Umur</th>
+                    <th>Nama Lengkap Ibu</th>
+                    <th>Nama Lengkap Ayah</th>
                     <th>Pendidikan</th>
                     <th>Status</th>
                     <th>Aksi</th>
@@ -37,6 +39,8 @@
                         <td> <?= $value->asal_tempat_lahir ?></td>
                         <td> <?= $value->tanggal_lahir ?></td>
                         <td> <?= $value->umur ?></td>
+                        <td> <?= $value->nama_lengkap_ibu ?></td>
+                        <td> <?= $value->nama_lengkap_ayah ?></td>
                         <td> <?= $value->pendidikan ?></td>
                         <td> <?= $value->status ?></td>
                         <td>

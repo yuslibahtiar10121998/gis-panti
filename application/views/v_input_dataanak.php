@@ -37,6 +37,14 @@
                 <label>Umur</label>
                 <input name="umur" placeholder="Umur" <?= set_value('umur') ?> class="form-control" />
             </div>
+            <div class="form-group">
+                <label>Nama Lengkap Ibu</label>
+                <input name="nama_lengkap_ibu" placeholder="Nama Lengkap Ibu" <?= set_value('nama_lengkap_ibu') ?> class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Nama Lengkap Ayah</label>
+                <input name="nama_lengkap_ayah" placeholder="Nama Lengkap Ayah" <?= set_value('nama_lengkap_ayah') ?> class="form-control" />
+            </div>
 
             <div class="form-group">
                 <label>Pendidikan</label>

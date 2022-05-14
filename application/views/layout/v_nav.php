@@ -2,7 +2,7 @@
     <div class="sidebar-collapse">
         <ul class="nav" id="main-menu">
             <li class="text-center">
-                <img src="<?= base_url() ?>template/assets/img/img_panti.png" class="user-image img-responsive" />
+                <img src="<?= base_url() ?>template/assets/img/panti.png" class="user-image img-responsive" />
 
                 <!-- menu utama -->
             </li>

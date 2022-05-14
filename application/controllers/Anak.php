@@ -54,6 +54,8 @@ class Anak extends CI_Controller
             $this->form_validation->set_rules('umur', 'Umur', 'required', array(
                 'required' => '%s Harus Diisi !'
             ));
+            $this->form_validation->set_rules('nama_lengkap_ibu', 'nama lengkap ibu');
+            $this->form_validation->set_rules('nama_lengkap_ayah', 'nama lengkap ayah');
 
             if ($this->form_validation->run() == FALSE) {
                 $data = array(
@@ -74,6 +76,8 @@ class Anak extends CI_Controller
                     'asal_tempat_lahir'      => $this->input->post('asal_tempat_lahir'),
                     'tanggal_lahir'          => $this->input->post('tanggal_lahir'),
                     'umur'                   => $this->input->post('umur'),
+                    'nama_lengkap_ibu'       => $this->input->post('nama_lengkap_ibu'),
+                    'nama_lengkap_ayah'      => $this->input->post('nama_lengkap_ayah'),
                 );
                 $this->m_anak->simpan($data);
                 $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
@@ -123,7 +127,8 @@ class Anak extends CI_Controller
         $this->form_validation->set_rules('umur', 'Umur', 'required', array(
             'required' => '%s Harus Diisi !'
         ));
-
+        $this->form_validation->set_rules('nama_lengkap_ibu', 'nama lengkap ibu');
+        $this->form_validation->set_rules('nama_lengkap_ayah', 'nama lengkap ayah');
 
         if ($this->form_validation->run() == FALSE) {
             $data = array(
@@ -145,6 +150,8 @@ class Anak extends CI_Controller
                 'asal_tempat_lahir'      => $this->input->post('asal_tempat_lahir'),
                 'tanggal_lahir'          => $this->input->post('tanggal_lahir'),
                 'umur'                   => $this->input->post('umur'),
+                'nama_lengkap_ibu'       => $this->input->post('nama_lengkap_ibu'),
+                'nama_lengkap_ayah'      => $this->input->post('nama_lengkap_ayah'),
             );
             $this->m_anak->edit($data);
             $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');

@@ -40,16 +40,16 @@
                                 <?php endif; ?>
                             </select>
                         </div>
-                        <div class="form-group pt-3">
+                        <!-- <div class="form-group pt-3"> -->
                             <!-- Jumlah anak kan ? -->
-                            <label for="jumlah">Rentang jumlah</label>
+                            <!-- <label for="jumlah">Rentang jumlah</label>
                         </div>
                         <div class="form-group">
                             <input name="awal" type="number" placeholder="Masukkan nilai awal" class="form-control" />
                         </div>
                         <div class="form-group">
                             <input name="akhir" type="number" placeholder="Masukkan nilai akhir" class="form-control" />
-                        </div>
+                        </div> -->
 
                         <th><button name="cari" value="cari" type="submit" class="btn btn-info">Cari</button></th>
                 </form>

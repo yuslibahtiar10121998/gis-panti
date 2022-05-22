@@ -77,6 +77,11 @@
             </div>
 
             <div class="form-group">
+                <label>Foto</label>
+                <input type="file" name="gambar" class="form-control" required>
+            </div>
+
+            <div class="form-group">
                 <label></label>
                 <button type="submit" class="btn btn-sm btn-success">Simpan</button>
                 <a href="<?= base_url('anak/batal/') ?>" type="reset" class="btn btn-sm btn-warning">Batal</a>

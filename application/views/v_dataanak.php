@@ -26,6 +26,7 @@
                     <th>Nama Lengkap Ayah</th>
                     <th>Pendidikan</th>
                     <th>Status</th>
+                    <th>Foto Anak</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -43,6 +44,7 @@
                         <td> <?= $value->nama_lengkap_ayah ?></td>
                         <td> <?= $value->pendidikan ?></td>
                         <td> <?= $value->status ?></td>
+                        <td> <img src="<?= base_url('gambar/' . $value->gambar) ?>" class="zoom" height="50px" width="70px"></td>
                         <td>
                             <a href="<?= base_url('anak/edit/' . $value->id_anak) ?>" class="btn btn-sm btn-primary">Edit</a>
                             <a href="<?= base_url('anak/hapus/' . $value->id_anak) ?>" class="btn btn-sm btn-danger" onClick="return confirm('Yakin ingin menghapus ?')">Hapus</a>

@@ -20,7 +20,7 @@ class M_rekap extends CI_Model
 
     public function get_rekap_raw($kecamatan_id = null)
     {
-        return $this->db->select('kecamatan_id, SUM(CASE WHEN kelamin_id = 1 THEN 1 END) as laki_laki,
+        return $this->db->select('tbl_panas.kecamatan_id, SUM(CASE WHEN kelamin_id = 1 THEN 1 END) as laki_laki,
         SUM(CASE WHEN kelamin_id = 2 THEN 1 END) as perempuan,
         SUM(CASE WHEN status_id = 1 THEN 1 END)as yatim,
         SUM(CASE WHEN status_id = 2 THEN 1 END)as piatu,
@@ -33,6 +33,20 @@ class M_rekap extends CI_Model
             ->join('tbl_anak', 'tbl_panas.id_panas = tbl_anak.panas_id', 'inner')
             ->where(['tbl_panas.kecamatan_id' => $kecamatan_id])
             ->get()->row_array();
+    }
+
+    public function insert_rekap_anak($kecamatan_id = null, $id_rekap = null){
+        $this->db->select('id_anak');
+        $this->db->from('tbl_panas');
+        $this->db->join('tbl_anak', 'tbl_panas.id_panas = tbl_anak.panas_id');
+        $this->db->where('tbl_panas.kecamatan_id',$kecamatan_id);
+        $data = $this->db->get()->result_array();
+
+        foreach ($data as $val) {
+            $result = $this->db->insert('tbl_rekap_anak',['id_anak' => $val['id_anak'],'id_rekap' => $id_rekap]);
+        }
+
+        return true;
     }
 
     public function get_all_rekap($wilayah_id = null, $tahun = null)

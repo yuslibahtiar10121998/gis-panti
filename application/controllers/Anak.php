@@ -57,9 +57,15 @@ class Anak extends CI_Controller
             $this->form_validation->set_rules('nama_lengkap_ibu', 'nama lengkap ibu');
             $this->form_validation->set_rules('nama_lengkap_ayah', 'nama lengkap ayah');
 
-            if ($this->form_validation->run() == FALSE) {
-                $data = array(
+            if ($this->form_validation->run() == TRUE) {
+                $config['upload_path']    = './gambar/';
+                $config['allowed_types']  = 'gif|jpg|png|jpeg';
+                $config['max_size']       = 3000;
+                $this->upload->initialize($config);
+                if (!$this->upload->do_upload('gambar')) {
+                    $data = array(
                     'title' => 'Input Data Anak',
+                    'error_upload' => $this->upload->display_errors(),
                     'isi'   => 'v_input_dataanak',
                     "list_pendidikan" => get_pendidikan(),
                     "list_status" => get_status(),
@@ -67,6 +73,10 @@ class Anak extends CI_Controller
                 );
                 $this->load->view('layout/v_wrapper', $data, FALSE);
             } else {
+                $upload_data = array('uploads' => $this->upload->data());
+                $config['image_library'] = 'gd2';
+                $config['source_image'] = './gambar/' . $upload_data['uploads']['file_name'];
+                $this->load->library('image_lib', $config);
                 $data = array(
                     'panas_id' => get_user()->panas_id,
                     'pendidikan_id'          => $this->input->post('pendidikan_id'),
@@ -78,11 +88,20 @@ class Anak extends CI_Controller
                     'umur'                   => $this->input->post('umur'),
                     'nama_lengkap_ibu'       => $this->input->post('nama_lengkap_ibu'),
                     'nama_lengkap_ayah'      => $this->input->post('nama_lengkap_ayah'),
+                    'gambar'            => $upload_data['uploads']['file_name'],
                 );
-                $this->m_anak->simpan($data);
+                // $res = $this->m_anak->simpan($data);
+                // if ($res) {
+                //     $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
+                //     redirect('anak');
+                // } else {
+                //     $this->session->set_flashdata('pesan', 'Data gagal Disimpan !');
+                //     redirect('anak');
+                // }
                 $this->session->set_flashdata('pesan', 'Data Berhasil Disimpan !');
                 redirect('anak');
-            } {
+            }
+            } else {
                 die(validation_errors());
             }
         } else {

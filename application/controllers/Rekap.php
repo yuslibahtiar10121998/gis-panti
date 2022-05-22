@@ -47,7 +47,7 @@ class Rekap extends CI_Controller
 
         $data_rekap = [];
         foreach ($kecamatan as $key => $value) {
-            $rekap_kecamatan = $this->m_rekap->get_rekap_raw($value['id_kecamatan']);
+        $rekap_kecamatan = $this->m_rekap->get_rekap_raw($value['id_kecamatan']);
             if (!empty($rekap_kecamatan['kecamatan_id'])) {
                 $rekap_kecamatan['wilayah_id'] = $wilayah_id;
                 $rekap_kecamatan['tahun'] = date('Y');
@@ -63,7 +63,15 @@ class Rekap extends CI_Controller
         // var_dump($kecamatan);
         // die;
 
-        $result = $this->m_rekap->insert_rekap($data_rekap);
+        // $result = $this->m_rekap->insert_rekap($data_rekap);
+
+        foreach ($data_rekap as $key => $value) {
+            $this->db->insert('tbl_rekap', $value);
+            $id_rekap = $this->db->insert_id();
+            $this->m_rekap->insert_rekap_anak($value['kecamatan_id'], $id_rekap);
+        }
+
+        
         $this->session->set_flashdata('pesan', 'Data Berhasil Direkap !');
         redirect('rekap');
     }

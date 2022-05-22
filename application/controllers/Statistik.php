@@ -11,6 +11,7 @@ class Statistik extends CI_Controller
     public function index($id_kecamatan = null, $jenis_data = null, $tahun = null)
     {
         if (!empty($id_kecamatan) && !empty($jenis_data) && !empty($tahun)) {
+            // $anak = $this->m_statistik->get_data($id_kecamatan);
             $res = $this->m_statistik->get_statistik($id_kecamatan, $tahun);
             $data = array(
                 'title' => 'Statistik',

@@ -92,7 +92,6 @@ class Panti extends CI_Controller
                         'kecamatan_id'      => $this->input->post('kecamatan_id'),
                         'tahun_berdiri'     => $this->input->post('tahun_berdiri'),
                         'nama_panas'        => $this->input->post('nama_panas'),
-                        // 'jenis_panas'       => $this->input->post('jenis_panas'),
                         'jumlah_anak'       => $this->input->post('jumlah_anak'),
                         'daya_tampung'      => $this->input->post('daya_tampung'),
                         'alamat'            => $this->input->post('alamat'),

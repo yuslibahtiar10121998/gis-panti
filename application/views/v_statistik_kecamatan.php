@@ -26,7 +26,7 @@
                                                         'rgb(255, 205, 86)',
                                                     ]
                                                 }],
-                                                labels: ['yatim', 'piatu', 'yatim_piatu']
+                                                labels: ['Yatim', 'Piatu', 'Yatim-piatu']
                                             },
                                             options: {
                                                 scales: {
@@ -49,14 +49,6 @@
                                     Grafik jenis kelamin Anak
                                 </div>
                                 <div class="panel-body">
-                                    <?php
-                                    // foreach ($statistik as $key => $jeniskelamin) {
-                                    //     $lki[] = $jeniskelamin['laki_laki'];
-                                    //     $prm[] = $jeniskelamin['perempuan'];
-                                    //     $thn_klmn[] = $jeniskelamin['tahun'];
-                                    // }
-
-                                    ?>
                                     <canvas id="jeniskelaminChart"></canvas>
                                     <script>
                                         var ctx = document.getElementById('jeniskelaminChart');
@@ -67,11 +59,11 @@
                                                     data: [<?= $statistik['laki_laki'] ?>, <?= $statistik['perempuan'] ?>],
                                                     fill: false,
                                                     backgroundColor: [
-                                                        'rgb(255, 99, 132)',
                                                         'rgb(54, 162, 235)',
+                                                        'rgb(255, 99, 132)',
                                                     ]
                                                 }],
-                                                labels: ['laki-laki', 'perempuan']
+                                                labels: ['Perempuan', 'Laki-laki']
                                             },
                                             options: {
                                                 scales: {
@@ -94,20 +86,6 @@
                                     Grafik Pendidikan Anak
                                 </div>
                                 <div class="panel-body">
-                                    <?php
-
-                                    // // intine sesuai kro ngsior kie isine
-                                    // foreach ($statistik as $key => $pendidikan) {
-                                    //     // kie SD brti
-                                    //     $sd[] = $pendidikan['sd'];
-                                    //     $sma[] = $pendidikan['sma'];
-                                    //     $smp[] = $pendidikan['smp'];
-                                    //     $tdk_sklh[] = $pendidikan['tidak_sekolah'];
-                                    //     // kie tahun pendidikan
-                                    //     $thn_pddkn[] = $pendidikan['tahun'];
-                                    // }
-
-                                    ?>
                                     <canvas id="pendidikanChart"></canvas>
                                     <script>
                                         var ctx = document.getElementById('pendidikanChart');
@@ -124,7 +102,7 @@
                                                         'rgb(150, 200, 15)',
                                                     ]
                                                 }],
-                                                labels: ['sd', 'smp', 'sma', 'tidak_sekolah']
+                                                labels: ['SD', 'SMP', 'SMA', 'Tidak Sekolah']
 
                                             },
                                             options: {
@@ -146,16 +124,42 @@
                 
             </div>
         </div>
-        
         <div class="col-sm-12">
             <div class="panel panel-primary">
                 <div class="panel-heading">Tabel Statistik</div>
                     <div class="panel-body">
                     <div class="table-responsive">
-        <table class="table table-responsive table-bordered" id="datatables">
-        <?php $jns_data = ['pendidikan' => ['sd','smp','sma','tidak_sekolah'],'jk' => ['perempuan','laki_laki'],'status' => ['yatim','yatim_piatu','piatu']];
+        <?php $jns_data = ['pendidikan' => ['sd','smp','sma','tidak_sekolah'],'jk' => ['Perempuan','Laki-laki'],'status' => ['Yatim','Yatim-Piatu','Piatu']];
         $jml_row = count(@$jns_data[$jenis_data])?>
-        <table class="table table-responsive table-bordered" id="datatables">
+        <table class="table table-responsive table-striped" id="data">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Anak</th>
+                    <th>Pendidikan</th>                    
+                    <th>Jenis Kelamin</th>                    
+                    <th>Status</th>                    
+                    <th>Asal Panti</th>                    
+                    <th>Asal Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <?php $i=1; foreach($data_anak as $da):?>
+                <tr>
+                    <td><?=$i?></td>
+                    <td><?=$da['nama_lengkap']?></td>
+                    <td><?=strtoupper($da['pendidikan'])?></td>
+                    <td><?=$da['nama_kelamin']?></td>
+                    <td><?=$da['status']?></td>
+                    <td><?=$da['nama_panas']?></td>
+                    <td><?=$da['asal_tempat_lahir']?></td>
+                    <td><?=$da['tanggal_lahir']?></td>
+                </tr>
+                <?php $i++; endforeach;?>
+            </tbody>
+        </table>
+        <!-- <table class="table table-responsive table-bordered" id="datatables">
             <thead>
                 <tr>
                     <th>No</th>
@@ -175,9 +179,10 @@
                         <td><?= $statistik[$jns_data[$jenis_data][$i]]?></td>
                         <?php endfor;?>
                 </tr>
-            </tbody>
-        </table>
+            </tbody>-->
+        <!-- </table> -->
     </div>
+    
             </div>
         </div>
     </div>

@@ -13,10 +13,13 @@ class Statistik extends CI_Controller
         if (!empty($id_kecamatan) && !empty($jenis_data) && !empty($tahun)) {
             // $anak = $this->m_statistik->get_data($id_kecamatan);
             $res = $this->m_statistik->get_statistik($id_kecamatan, $tahun);
+            $data_anak = $this->m_statistik->get_data_anak($id_kecamatan,$res['id_rekap']);
+            
             $data = array(
                 'title' => 'Statistik',
                 'jenis_data' => $jenis_data,
                 'tahun' => $tahun,
+                'data_anak' => $data_anak,
                 'statistik' => $res,
                 'isi'   => 'v_statistik_kecamatan'
 
